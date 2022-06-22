@@ -3,7 +3,7 @@
 
 ---
 
-<h1 id="常用命令">1.常用命令</h1>
+<h2 id="常用命令">1.常用命令</h2>
 <h4 id="安装之后启动docker"><strong>1.安装之后启动docker</strong></h4>
 <pre><code>systemctl start docker
 </code></pre>
