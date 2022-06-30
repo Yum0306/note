@@ -1,8 +1,9 @@
 windows下
 ```
 1.配置环境变量，将mysql的bin目录配置到环境变量的path变量中
-2.在cmd命令行执行 mysqld -
+2.在cmd命令行执行 mysqld --install mysql56指令，将mysql数据库服务端注册成windows服务程序
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc3NTE0MzkzXX0=
+eyJoaXN0b3J5IjpbLTgyNjIyMjA4MF19
 -->
