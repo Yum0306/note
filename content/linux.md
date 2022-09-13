@@ -6,6 +6,8 @@
 4. 添加用户组并添加当前用户到该用户组
 sudo groupadd 用户组
 sudo gpasswd -a username  用户组
+5.清除内存中buff/cache占用 需要在root环境
+echo 3> /proc/sys/vm/drop_caches
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -139,5 +141,6 @@ eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的�
 find ./ -d -name "target" | xargs rm -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbMzQzMTc4NDQwLDU0NTM2MDI3Miw0Njc4OD
+Y5OTldfQ==
 -->
