@@ -103,7 +103,7 @@ ls | xargs -i zip -r {}.zip {}
 
 #### 1.生成ssh公钥和私钥
 ```
-	ssh-keygen -t rsa -C "i@vim.plus"
+	ssh-keygen -t rsa -C "你的邮箱地址"
 	会在系统用户更目录下.ssh文件夹生成id_rsa(私钥)、id_rsa.pub（公钥）文件
 	然后再对应的平台上添加ssh公钥 这个好操作
 	然后讲私钥添加到本地ssh管理
@@ -135,9 +135,9 @@ du -sh ./* | sort -hr | head
 
 ##  查找find命令
 ```
-eg: 查找当前指定目录下 所有的target目录 并且删除
+eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的是 查找目录
 find ./ -d -name "target" | xargs rm -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njg3NjczMjMsNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
 -->
