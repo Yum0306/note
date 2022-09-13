@@ -100,8 +100,9 @@ ls | xargs -i zip -r {}.zip {}
 ```
 
 ## 免密ssh登录远程主机
+
+#### 1.生成ssh公钥和私钥
 ```
-1.生成ssh公钥和私钥
 	ssh-keygen -t rsa -C "i@vim.plus"
 	会在系统用户更目录下.ssh文件夹生成id_rsa(私钥)、id_rsa.pub（公钥）文件
 	然后再对应的平台上添加ssh公钥 这个好操作
@@ -111,15 +112,19 @@ ls | xargs -i zip -r {}.zip {}
 	2.eval ssh-agent -s
 	3.ssh-add "id_rsa"
 	linux 应该只需要执行3即可
-	然后再正常执行 git init add 等操作
-2.将公钥传到服务器上
+```
+#### 2.将公钥传到服务器上
+```
 	scp ~/.ssh/authorized_keys user@IP:~/.ssh/authorized_keys
-3.完成上述步骤已经可以进行SSH免密登录了，顺便配置一下 服务器别称
-4.打开～/.ssh/config文件，如果没有可以自己创建，按照如下格式添加即可
+```
+#### 3.完成上述步骤已经可以进行SSH免密登录了，顺便配置一下 服务器别称
+#### 4.打开～/.ssh/config文件，如果没有可以自己创建，按照如下格式添加即可
+```
 Host 别称名
     Hostname 服务器ip地址
     User 登录用户
     Port ssh登录端口
+
 5.测试  ssh 别称名  即可登录
 ```
 ## 查找指定目录下的大文件
@@ -134,5 +139,5 @@ eg: 查找当前指定目录下 所有的target目录 并且删除
 find ./ -d -name "target" | xargs rm -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODEzMTE5OSw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbLTE4OTU2NTgyMzksNDY3ODg2OTk5XX0=
 -->
