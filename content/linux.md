@@ -99,7 +99,10 @@ docker system prune -a
 ls | xargs -i zip -r {}.zip {}
 ```
 
-
+## 免密ssh登录远程主机
+```
+1.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjUxMTUyOTksNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbLTE0MzgxMzI5MSw0Njc4ODY5OTldfQ==
 -->
