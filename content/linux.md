@@ -115,8 +115,12 @@ ls | xargs -i zip -r {}.zip {}
 2.将公钥传到服务器上
 	scp ~/.ssh/authorized_keys user@IP:~/.ssh/authorized_keys
 3.完成上述步骤已经可以进行SSH免密登录了，顺便配置一下 服务器别称
-4.打开～/.上升
+4.打开～/.ssh/config文件，如果没有可以自己创建，按照如下格式添加即可
+Host 别称名
+    Hostname 服务器ip地址
+    User 登录用户
+    Port ssh登录端口
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTEzODI2Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbMjAzNjEyMzUwMSw0Njc4ODY5OTldfQ==
 -->
