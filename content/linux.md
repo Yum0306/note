@@ -144,8 +144,12 @@ find ./ -d -name "target" | xargs rm -rf
 ```
 
 ## SSH免密登录 + inotify-tools文件监听 + Docker 实现自动部署
-1.SSH配置上面已经有了
+#### 1.SSH配置上面已经有了
+#### 2.安装inotify-tools
+```
+2.1首先安装autoreconf 因为最新版本的inotify-tools 使用autoreconf配额
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MDgxMTMyMSwxMjA1MDI0MjgyLDUxNT
+eyJoaXN0b3J5IjpbMTExOTMzNDYzNywxMjA1MDI0MjgyLDUxNT
 A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
