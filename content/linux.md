@@ -113,7 +113,10 @@ ls | xargs -i zip -r {}.zip {}
 	linux 应该只需要执行3即可
 	然后再正常执行 git init add 等操作
 2.将公钥传到服务器上
+	scp ~/.ssh/authorized_keys user@IP:~/.ssh/authorized_keys
+3.完成上述步骤已经可以进行SSH免密登录了，顺便配置一下 服务器别称
+4.打开～/.上升
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Njc0NTM1MzAsNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbMjAwOTEzODI2Miw0Njc4ODY5OTldfQ==
 -->
