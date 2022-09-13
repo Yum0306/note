@@ -101,8 +101,19 @@ ls | xargs -i zip -r {}.zip {}
 
 ## 免密ssh登录远程主机
 ```
-1.
+1.生成ssh公钥和私钥
+	ssh-keygen -t rsa -C "i@vim.plus"
+	会在系统用户更目录下.ssh文件夹生成id_rsa(私钥)、id_rsa.pub（公钥）文件
+	然后再对应的平台上添加ssh公钥 这个好操作
+	然后讲私钥添加到本地ssh管理
+	win下需要执行
+	1.exec ssh-agent bash
+	2.eval ssh-agent -s
+	3.ssh-add "id_rsa"
+	linux 应该只需要执行3即可
+	然后再正常执行 git init add 等操作
+2.将公钥传到服务器上
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzgxMzI5MSw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbLTE0Njc0NTM1MzAsNDY3ODg2OTk5XX0=
 -->
