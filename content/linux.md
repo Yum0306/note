@@ -147,9 +147,12 @@ find ./ -d -name "target" | xargs rm -rf
 #### 1.SSH配置上面已经有了
 #### 2.安装inotify-tools
 ```
-2.1首先安装autoreconf 因为最新版本的inotify-tools 使用autoreconf配额
+2.1首先安装autoreconf 因为最新版本的inotify-tools 使用autoreconf配置
+yum  -y install autoconf automake libtool
+2.2去 https://codeload.github.com/inotify-tools/inotify-tools/tar.gz/refs/tags/3.22.6.0/inotify-tools-3.22.6.0.tar.gz 下自傲源文件
+2.3 解压 tar -zxvf 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTMzNDYzNywxMjA1MDI0MjgyLDUxNT
+eyJoaXN0b3J5IjpbMTEzMzY3NTM3MiwxMjA1MDI0MjgyLDUxNT
 A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
