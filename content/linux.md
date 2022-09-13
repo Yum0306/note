@@ -155,8 +155,22 @@ yum  -y install autoconf automake libtool
 2.5 ./configure --prefix=/usr/local/inotify
 2.6 make && make install
 ```
-
+#### 3.添加监听脚本和部署脚本
+```
+1.监听脚本
+#!/bin/sh  
+# 监视的文件或目录  
+filename=target/yatai-school-platform-1.0-SNAPSHOT.jar  
+# 监视发现有增、删、改时执行的脚本  
+script=run.sh  
+/usr/local/inotify/bin/inotifywait -mq  --format  '%e'  --event close_write $filename | while read event  
+do  
+	case  $event  in CLOSE_WRITE,CLOSE) bash $script ;;  
+	esac  
+done
+2
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQwNjQyNDQ1LDEyMDUwMjQyODIsNTE1MD
-Y5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbLTkxNTQ5NTYwNywxMjA1MDI0MjgyLDUxNT
+A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
