@@ -120,7 +120,13 @@ Host 别称名
     Hostname 服务器ip地址
     User 登录用户
     Port ssh登录端口
+5.测试  ssh 别称名  即可登录
+```
+## 查找指定目录下的大文件
+```
+找出当前目录下 排名遣使
+du -sh ./* | sort -hr | head
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNjEyMzUwMSw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbLTEyMjUxNzAwMjgsNDY3ODg2OTk5XX0=
 -->
