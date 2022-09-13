@@ -168,9 +168,18 @@ do
 	case  $event  in CLOSE_WRITE,CLOSE) bash $script ;;  
 	esac  
 done
-2
+
+2.打包脚本
+docker rm sync -f  
+docker rmi sync:v1.0 -f  
+docker build -t sync:v1.0 .  
+docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /home/sync/config:/config --restart=always --name sync sync:v1.0
+```
+#### 4.后台静默云监听脚本即可
+```
+./
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTQ5NTYwNywxMjA1MDI0MjgyLDUxNT
+eyJoaXN0b3J5IjpbLTk1MjI3OTAzNiwxMjA1MDI0MjgyLDUxNT
 A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
