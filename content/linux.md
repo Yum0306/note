@@ -150,9 +150,13 @@ find ./ -d -name "target" | xargs rm -rf
 2.1首先安装autoreconf 因为最新版本的inotify-tools 使用autoreconf配置
 yum  -y install autoconf automake libtool
 2.2去 https://codeload.github.com/inotify-tools/inotify-tools/tar.gz/refs/tags/3.22.6.0/inotify-tools-3.22.6.0.tar.gz 下自傲源文件
-2.3 解压 tar -zxvf 
+2.3 解压 tar -zxvf inotify-tools-3.22.6.0.tar.gz 并进入解压完目录
+2.4 执行脚本./autogen.sh 生成configure 配置脚本
+2.5 ./configure --prefix=/usr/local/inotify
+2.6 make && make install
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzY3NTM3MiwxMjA1MDI0MjgyLDUxNT
-A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbNTQwNjQyNDQ1LDEyMDUwMjQyODIsNTE1MD
+Y5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
 -->
