@@ -177,9 +177,10 @@ docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /h
 ```
 #### 4.后台静默云监听脚本即可
 ```
-./monitor.sh &
+nohup ./monitor.sh &
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgzOTk4ODQwLDEyMDUwMjQyODIsNTE1MD
-Y5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMD
+UwMjQyODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+
 -->
