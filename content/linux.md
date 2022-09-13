@@ -124,9 +124,9 @@ Host 别称名
     Hostname 服务器ip地址
     User 登录用户
     Port ssh登录端口
-
-5.测试  ssh 别称名  即可登录
 ```
+#### 5.测试  ssh 别称名  即可登录
+
 ## 查找指定目录下的大文件
 ```
 找出当前目录下 排名前十的占用
@@ -139,5 +139,5 @@ eg: 查找当前指定目录下 所有的target目录 并且删除
 find ./ -d -name "target" | xargs rm -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTU2NTgyMzksNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbLTE4Njg3NjczMjMsNDY3ODg2OTk5XX0=
 -->
