@@ -8,6 +8,8 @@ sudo groupadd 用户组
 sudo gpasswd -a username  用户组
 5.清除内存中buff/cache占用 需要在root环境下执行
 echo 3> /proc/sys/vm/drop_caches
+6.查看指定文件md5值，判断文件是否被修改过
+md5sum 文件
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -141,6 +143,6 @@ eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的�
 find ./ -d -name "target" | xargs rm -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Nj
-k5OV19
+eyJoaXN0b3J5IjpbMTIwNTAyNDI4Miw1MTUwNjk4Miw1NDUzNj
+AyNzIsNDY3ODg2OTk5XX0=
 -->
