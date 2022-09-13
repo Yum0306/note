@@ -94,7 +94,12 @@ docker image prune --all
 docker system prune -a
 ```
 
+## 将指定目录下的所有文件分别打成独立的压缩包
+```
+ls | xargs -i zip -r {}.zip {}
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbLTEzMjUxMTUyOTksNDY3ODg2OTk5XX0=
 -->
