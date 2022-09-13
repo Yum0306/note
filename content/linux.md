@@ -143,8 +143,9 @@ eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的�
 find ./ -d -name "target" | xargs rm -rf
 ```
 
-## SSH + 
+## SSH免密登录 + inotify-tools文件监听 + Docker 实现自动部署
+1.SSH配置上面已经有了
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2MzY5NzcsMTIwNTAyNDI4Miw1MTUwNj
-k4Miw1NDUzNjAyNzIsNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbLTk1MDgxMTMyMSwxMjA1MDI0MjgyLDUxNT
+A2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
