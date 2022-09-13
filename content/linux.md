@@ -142,7 +142,9 @@ du -sh ./* | sort -hr | head
 eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的是 查找目录
 find ./ -d -name "target" | xargs rm -rf
 ```
+
+## SSH + 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNTAyNDI4Miw1MTUwNjk4Miw1NDUzNj
-AyNzIsNDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbMzU2MzY5NzcsMTIwNTAyNDI4Miw1MTUwNj
+k4Miw1NDUzNjAyNzIsNDY3ODg2OTk5XX0=
 -->
