@@ -76,9 +76,11 @@ docker
 ### 在docker容器中使用clear命令失败解决方法
 ```
 dnf install ncurses -y
-
+以下不是
+dnf install libaio -y  
+dnf install numactl -y
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjIxODg5Niw4MTIzNzMzNzQsLTM0NT
+eyJoaXN0b3J5IjpbMTYxNDYxNjkxOCw4MTIzNzMzNzQsLTM0NT
 c0NzIwNl19
 -->
