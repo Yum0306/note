@@ -72,6 +72,11 @@ docker exec -it 60dd60d9ea5a bash (centos)
 ~~~
 docker
 
+
+### 在docker容器中使用clear命令失败解决方法
+```
+dnf install ncurses -y
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTc0NzIwNl19
+eyJoaXN0b3J5IjpbODEyMzczMzc0LC0zNDU3NDcyMDZdfQ==
 -->
