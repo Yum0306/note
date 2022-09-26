@@ -80,7 +80,12 @@ dnf install ncurses -y
 dnf install libaio -y  
 dnf install numactl -y
 ```
+
+### docker启动失败 查看失败原因
+```
+dockerd --debug
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDYxNjkxOCw4MTIzNzMzNzQsLTM0NT
-c0NzIwNl19
+eyJoaXN0b3J5IjpbLTEwNjg2NzA0ODQsMTYxNDYxNjkxOCw4MT
+IzNzMzNzQsLTM0NTc0NzIwNl19
 -->
