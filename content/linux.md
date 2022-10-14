@@ -2,8 +2,9 @@
 ```
 1. df -h 查看磁盘占用
 2. find / -type f -size +800M  查找磁盘上占用超过800M的文件
-3. uname -r 查看linux 的内核版本
-4. 添加用户组并添加当前用户到该用户组
+3. find / -type f -size +800M 2>/dev/null | sort -hr | xargs ls -l 查找大于800M的文件并忽略权限不足提示 然后按照从大小到排序，然后在查看列表展示
+4. uname -r 查看linux 的内核版本
+5. 添加用户组并添加当前用户到该用户组
 sudo groupadd 用户组
 sudo gpasswd -a username  用户组
 5.清除内存中buff/cache占用 需要在root环境下执行
@@ -180,7 +181,7 @@ docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /h
 nohup ./monitor.sh &
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMD
-UwMjQyODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
-
+eyJoaXN0b3J5IjpbMTQ3NzUxOTM5MCwtMTU0ODU2Njk4Niw0OD
+M5OTg4NDAsMTIwNTAyNDI4Miw1MTUwNjk4Miw1NDUzNjAyNzIs
+NDY3ODg2OTk5XX0=
 -->
