@@ -188,10 +188,11 @@ nohup ./monitor.sh &
 ```
 1 balooctl suspend // 立即停止
 2 balooctl disable // 停用框架
-
+删除index
+rm ~/.local/share/baloo/ -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzEyNzA2OCwtODU1NjQ3ODg4LDE0Nz
+eyJoaXN0b3J5IjpbMTIxMDk5Mzk2MywtODU1NjQ3ODg4LDE0Nz
 c1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMDUwMjQy
 ODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
 -->
