@@ -11,6 +11,9 @@ sudo gpasswd -a username  用户组
 echo 3> /proc/sys/vm/drop_caches
 6.查看指定文件md5值，判断文件是否被修改过
 md5sum 文件
+7.对指定相同后缀名的文件进行批量修改
+find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
+
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -181,7 +184,7 @@ docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /h
 nohup ./monitor.sh &
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NzUxOTM5MCwtMTU0ODU2Njk4Niw0OD
-M5OTg4NDAsMTIwNTAyNDI4Miw1MTUwNjk4Miw1NDUzNjAyNzIs
-NDY3ODg2OTk5XX0=
+eyJoaXN0b3J5IjpbLTg1NTY0Nzg4OCwxNDc3NTE5MzkwLC0xNT
+Q4NTY2OTg2LDQ4Mzk5ODg0MCwxMjA1MDI0MjgyLDUxNTA2OTgy
+LDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
