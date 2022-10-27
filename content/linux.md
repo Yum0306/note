@@ -183,8 +183,15 @@ docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /h
 ```
 nohup ./monitor.sh &
 ```
+
+#### baloo
+```
+1 balooctl suspend // 立即停止
+2 balooctl disable // 停用框架
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NTY0Nzg4OCwxNDc3NTE5MzkwLC0xNT
-Q4NTY2OTg2LDQ4Mzk5ODg0MCwxMjA1MDI0MjgyLDUxNTA2OTgy
-LDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbMTMwMzEyNzA2OCwtODU1NjQ3ODg4LDE0Nz
+c1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMDUwMjQy
+ODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
 -->
