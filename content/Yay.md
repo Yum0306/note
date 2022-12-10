@@ -437,29 +437,29 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 不在后台循环调用sudo，可能会导致sudo授权在长时间构建期间超时。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#batchinstall "batchinstall")batchinstall[](https://zhul.in/2021/04/04/yay-more/#batchinstall)
+#### "batchinstall")batchinstall
 
-##### [](https://zhul.in/2021/04/04/yay-more/#batchinstall-1 "--batchinstall")`--batchinstall`[](https://zhul.in/2021/04/04/yay-more/#batchinstall-1)
+#####  "--batchinstall")`--batchinstall`
 
 在构建和安装AUR包时，对每个软件包的安装进行排序，而并非在构建之后立刻安装每个软件包时。 需要注意的是，一旦构建了所有软件包，或者需要构建队列中的软件包作为构建另一个软件包的依赖项，应当在安装队列中安装所有软件包。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nobatchinstall "*--nobatchinstall")*`--nobatchinstall`[](https://zhul.in/2021/04/04/yay-more/#nobatchinstall)
+#####  "*--nobatchinstall")*`--nobatchinstall`
 
 在构建AUR包成功后立即安装。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#clearafter "clearafter")clearafter[](https://zhul.in/2021/04/04/yay-more/#clearafter)
+#### "clearafter")clearafter
 
-##### [](https://zhul.in/2021/04/04/yay-more/#cleanafter "--cleanafter")`--cleanafter`[](https://zhul.in/2021/04/04/yay-more/#cleanafter)
+#####  "--cleanafter")`--cleanafter`
 
 在构建AUR包完成以后清除cache文件。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nocleanafter "*--nocleanafter")*`--nocleanafter`[](https://zhul.in/2021/04/04/yay-more/#nocleanafter)
+#####  "*--nocleanafter")*`--nocleanafter`
 
 在构建AUR包完成以后不清除cache文件。
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E5%85%B6%E4%BB%96%E5%9E%8B "其他型")其他型[](https://zhul.in/2021/04/04/yay-more/#%E5%85%B6%E4%BB%96%E5%9E%8B)
+###  "其他型")其他型
 
-##### [](https://zhul.in/2021/04/04/yay-more/#save "--save")`--save`[](https://zhul.in/2021/04/04/yay-more/#save)
+##### "--save")`--save`
 
 把你这一次执行yay后面跟的配置参数永久保存下来。
 
@@ -501,5 +501,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODc5NDQxNDRdfQ==
+eyJoaXN0b3J5IjpbLTE0MzQ4MTgzMF19
 -->
