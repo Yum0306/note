@@ -22,21 +22,19 @@ yay的基本用法是`yay <operation> [options] [targets]`、`yay foo`和`yay`�
 
 通过yay后面直接跟包名的命令会让yay直接在源和AUR内搜索带有`foo`关键词的包（包名和简介中只要出现foo都会被一网打尽），以下是我执行`yay dingtalk`的输出
 
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-
 ```
-5 aur/com.dingtalk.deepin 5.0.15deepin7-1 (+0 0.00)    Deepin Wine dingtalk4 aur/deepin.com.dingtalk.com 5.1.28.12-2 (+1 0.12)    DingTalk Client on Deepin Wine3 aur/dingtalk 2.1.3-1 (+3 0.00)    钉钉桌面版，基于electron和钉钉网页版开发，支持Windows、Linux和macOS2 aur/dingtalk-linux 3.5.5-1 (+6 0.12)    May be the official Linux experimental version1 aur/dingtalk-electron 2.1.9-1 (+9 0.15)    钉钉Linux版本==> Packages to install (eg: 1 2 3, 1-3 or ^4)==
+5 aur/com.dingtalk.deepin 5.0.15deepin7-1 (+0 0.00)  
+Deepin Wine dingtalk  
+4 aur/deepin.com.dingtalk.com 5.1.28.12-2 (+1 0.12)  
+DingTalk Client on Deepin Wine  
+3 aur/dingtalk 2.1.3-1 (+3 0.00)  
+钉钉桌面版，基于electron和钉钉网页版开发，支持Windows、Linux和macOS  
+2 aur/dingtalk-linux 3.5.5-1 (+6 0.12)  
+May be the official Linux experimental version  
+1 aur/dingtalk-electron 2.1.9-1 (+9 0.15)  
+钉钉Linux版本  
+==> Packages to install (eg: 1 2 3, 1-3 or ^4)  
+==
 ```
 
 输入每一项对应的序号即可进入相应的安装过程。
@@ -501,5 +499,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzQ4MTgzMF19
+eyJoaXN0b3J5IjpbMTAwMjM2ODE0MSwtMTQzNDgxODMwXX0=
 -->
