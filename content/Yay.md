@@ -463,11 +463,9 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 把你这一次执行yay后面跟的配置参数永久保存下来。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#aururl "--aururl")`--aururl`[](https://zhul.in/2021/04/04/yay-more/#aururl)
+##### "--aururl")`--aururl`
 
 更改aur源地址（默认为 [https://aur.archlinux.org](https://aur.archlinux.org/) ），适用于中国用户，可以使用此参数将AUR的地址设置成清华的反代，具体的配置命令为
-
-1  
 
 ```
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
@@ -475,29 +473,27 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 
 TUNA 的反代已经取消，可以使用如下命令设置回 AUR 官方源
 
-1  
-
 ```
 yay --aururl "https://aur.archlinux.org" --save
 ```
 
-##### [](https://zhul.in/2021/04/04/yay-more/#sortby "--sortby")`--sortby`[](https://zhul.in/2021/04/04/yay-more/#sortby)
+#####  "--sortby")`--sortby`
 
 在搜索过程中，按特定条件对AUR结果进行排序，后跟`<votes|popularity|id|baseid|name|base|submitted|modified`参数，默认为`votes`。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#searchby "--searchby")`--searchby`[](https://zhul.in/2021/04/04/yay-more/#searchby)
+##### "--searchby")`--searchby`
 
 通过指定查询类型来搜索AUR软件包，后跟`<name|name-desc|maintainer|depends|checkdepends|makedepends|optdepends`参数，默认为`name-desc`。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#topdown "*--topdown")*`--topdown`[](https://zhul.in/2021/04/04/yay-more/#topdown)
+#####  "*--topdown")*`--topdown`
 
 优先展示源内包，其次才是AUR包
 
-##### [](https://zhul.in/2021/04/04/yay-more/#bottomup "--bottomup")`--bottomup`[](https://zhul.in/2021/04/04/yay-more/#bottomup)
+#####  "--bottomup")`--bottomup`
 
 优先展示AUR包，其次才是源内包
 
-##### [](https://zhul.in/2021/04/04/yay-more/#requestsplitn-lt-number-gt "--requestsplitn <number>")`--requestsplitn <number>`
+##### "--requestsplitn <number>")`--requestsplitn <number>`
 
 设置在每次向AUR的请求的最大数值（默认150）。数值越高，请求时间越短，但是单次请求的数值过大会导致error。当这个数值＞500时你应当特别注意这一点。
 
@@ -505,5 +501,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyMjU4MzE2XX0=
+eyJoaXN0b3J5IjpbLTE2ODc5NDQxNDRdfQ==
 -->
