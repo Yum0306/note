@@ -1,4 +1,61 @@
-
+## git配置
+# git ssh 配置  
+```  
+ssh-keygen -t rsa -C "i@vim.plus"  
+会在系统用户更目录下.ssh文件夹生成id_rsa(私钥)、id_rsa.pub（公钥）文件  
+然后再对应的平台上添加ssh公钥  这个好操作  
+然后讲私钥添加到本地ssh管理  
+win下需要执行  
+1.exec ssh-agent bash  
+2.eval ssh-agent -s  
+3.ssh-add "id_rsa"  
+linux 应该只需要执行3即可  
+然后再正常执行 git init add 等操作  
+```  
+#git .gitignore  
+```  
+HELP.md  
+target/  
+!.mvn/wrapper/maven-wrapper.jar  
+!**/src/main/**/target/  
+!**/src/test/**/target/  
+!**/logs/  
+*.log  
+  
+### STS ###  
+.apt_generated  
+.classpath  
+.factorypath  
+.project  
+.settings  
+.springBeans  
+.sts4-cache  
+  
+### IntelliJ IDEA ###  
+.idea  
+*.iws  
+*.iml  
+*.ipr  
+  
+### NetBeans ###  
+/nbproject/private/  
+/nbbuild/  
+/dist/  
+/nbdist/  
+/.nb-gradle/  
+build/  
+!**/src/main/**/build/  
+!**/src/test/**/build/  
+  
+### VS Code ###  
+.vscode/  
+  
+```  
+# git ssh 非22端口  
+```  
+ssh -T -p222 git@127.0.0.1 可以测试配置git ssh免密之后是否生效  
+git remote add origin ssh://git@127.0.0.1:222/java/test.git  
+```
 
 
 ## git常用命令
@@ -49,5 +106,5 @@ linux 应该只需要执行3即可
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTk3MzYxNzJdfQ==
+eyJoaXN0b3J5IjpbNDQ1NzM3NTc4XX0=
 -->
