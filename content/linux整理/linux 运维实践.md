@@ -142,17 +142,6 @@ Host 别称名
 ```
 #### 5.测试  ssh 别称名  即可登录
 
-## 查找指定目录下的大文件
-```
-
-```
-
-##  查找find命令
-```
-eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的是 查找目录
-
-```
-
 ## SSH免密登录 + inotify-tools文件监听 + Docker 实现自动部署
 #### 1.SSH配置上面已经有了
 #### 2.安装inotify-tools
@@ -190,7 +179,7 @@ docker run -itd -p 9090:9090 -v /mnt:/mnt -v /xxx-java/data:/xxx-java/data -v /h
 nohup ./monitor.sh &
 ```
 
-#### baloo
+## baloo
 ```
 1 balooctl suspend // 立即停止
 2 balooctl disable // 停用框架
@@ -198,7 +187,7 @@ nohup ./monitor.sh &
 rm ~/.local/share/baloo/ -rf
 ```
 
-#### 断网监听及重启docker服务脚本,挂上定是任务,即可时刻通过网络状态对服务
+## 断网监听及重启docker服务脚本,挂上定是任务,即可时刻通过网络状态对服务
 ```
 #!/bin/bash
 server="www.baidu.com"
@@ -225,7 +214,7 @@ else
 fi
 ```
 
-#### 通过JAVA启动参数配置及docker挂载配置,实现docker内java服务出现爆内存情况时自动重启docker服务
+## 通过JAVA启动参数配置及docker挂载配置,实现docker内java服务出现爆内存情况时自动重启docker服务
 
 1.在Dockerfile中最后执行jar启动命令上添加 -XX:OnOutOfMemoryError和-XX:OnError 用于当出现OutOfMemory或者Error时执行命令
 ```
@@ -361,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYyMDU2Nzc2XX0=
+eyJoaXN0b3J5IjpbNTA2MjM2MjAzXX0=
 -->
