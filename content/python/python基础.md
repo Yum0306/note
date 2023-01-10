@@ -400,15 +400,11 @@ If no argument is given, the constructor creates a new empty list.
 
 tuple(元祖)
 ~~~
-
 | If no argument is given, the constructor returns an empty tuple.
-
 | If iterable is specified the tuple is initialized from iterable's items.
-
 ~~~
 
 如果没有给出参数，构造函数返回一个空元组。
-
 如果指定了iterable，则从iterable的项初始化元组。
 
 ~~~
@@ -1647,5 +1643,5 @@ x = property(getPages,setPages,delPages)
 
 | **contains**(self, item) | 定义当使用成员测试运算符（in 或 not in）时的行为 |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU5NDI2NTU1XX0=
+eyJoaXN0b3J5IjpbMTQ5NzgzMDg5OV19
 -->
