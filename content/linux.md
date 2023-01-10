@@ -199,7 +199,7 @@ rm ~/.local/share/baloo/ -rf
 #!/bin/bash
 server="www.baidu.com"
 temp=${HOME}/status.temp
-container_name=
+container_name=platform
 if [ ! -d $temp ];then
     touch $temp
 fi
@@ -215,7 +215,7 @@ else
     echo $result
     if [ ! -z $result ];then
         echo "2222网络连上了!!!!"
-        docker restart platform
+        docker restart $container_name
     fi
     echo "NETWORK_CONNECTING=TRUE" > $temp
 fi
@@ -232,9 +232,9 @@ ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="doc
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMzNjU2NDIzLDEzMzQxMTczMzYsLTM3Mj
-EyODE4OSwxMzk5MjIwOTcyLC0yMDg1Nzk5NjU3LDEyMTA5OTM5
-NjMsLTg1NTY0Nzg4OCwxNDc3NTE5MzkwLC0xNTQ4NTY2OTg2LD
-Q4Mzk5ODg0MCwxMjA1MDI0MjgyLDUxNTA2OTgyLDU0NTM2MDI3
-Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbLTE2Mzc4OTcyMDAsMTMzNDExNzMzNiwtMz
+cyMTI4MTg5LDEzOTkyMjA5NzIsLTIwODU3OTk2NTcsMTIxMDk5
+Mzk2MywtODU1NjQ3ODg4LDE0Nzc1MTkzOTAsLTE1NDg1NjY5OD
+YsNDgzOTk4ODQwLDEyMDUwMjQyODIsNTE1MDY5ODIsNTQ1MzYw
+MjcyLDQ2Nzg4Njk5OV19
 -->
