@@ -222,14 +222,14 @@ fi
 
 #### 通过JAVA启动参数配置及docker挂载配置,实现docker内java服务出现爆内存情况时自动重启docker服务
 ```
-1.在Dockerfile中添加
-ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart platform" -XX:OnError="docker restart platform" -Dspring.profiles.active=$SPRING_PROFILES_ACTIVE   -Dserver.port=$START_PORT -Dsystem.env=$START_ENV -jar $JAR_FILE
+1.在Dockerfile中最后执行jar启动命令上添加 -XX:OnOutOfMemoryError和-XX:OnError 用于当出现OutOfMemory和
+ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="docker restart service" -jar $JAR_FILE
 2.在容器启动是挂在docker.sock和docker实现在容器内操作docker
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM3MDY0NzQ0LDEzOTkyMjA5NzIsLTIwOD
-U3OTk2NTcsMTIxMDk5Mzk2MywtODU1NjQ3ODg4LDE0Nzc1MTkz
-OTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMDUwMjQyODIsNT
-E1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbLTExMTEzNjMxMjUsMTM5OTIyMDk3MiwtMj
+A4NTc5OTY1NywxMjEwOTkzOTYzLC04NTU2NDc4ODgsMTQ3NzUx
+OTM5MCwtMTU0ODU2Njk4Niw0ODM5OTg4NDAsMTIwNTAyNDI4Mi
+w1MTUwNjk4Miw1NDUzNjAyNzIsNDY3ODg2OTk5XX0=
 -->
