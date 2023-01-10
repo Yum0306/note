@@ -369,6 +369,8 @@ False
 
 | %G | 作用同 %g，根据值的大小决定使用 %f 或者 %E |
 
+
+
 **格式化操作符辅助命令**
 
 | **符号** | **说明** |
@@ -1687,5 +1689,5 @@ x = property(getPages,setPages,delPages)
 
 | **contains**(self, item) | 定义当使用成员测试运算符（in 或 not in）时的行为 |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MDIxOTI5N119
+eyJoaXN0b3J5IjpbLTYwNjA5ODMwMV19
 -->
