@@ -226,18 +226,18 @@ docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run
 ```
 
 ## Centos内核升级
-更新yum源仓库  
+#### 1.更新yum源仓库  
 ```  
 $ yum -y update  
 ```  
 启用 ELRepo 仓库  
 ELRepo 仓库是基于社区的用于企业级 Linux 仓库，提供对 RedHat Enterprise (RHEL) 和 其他基于 RHEL的 Linux 发行版（CentOS、Scientific、Fedora 等）的支持。  
 ELRepo 聚焦于和硬件相关的软件包，包括文件系统驱动、显卡驱动、网络驱动、声卡驱动和摄像头驱动等。  
-### #导入ELRepo仓库的公共密钥  
+#### 导入ELRepo仓库的公共密钥  
 ```  
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org  
 ```  
-### #安装ELRepo仓库的yum源  
+#### 安装ELRepo仓库的yum源  
 ```  
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm  
 ```  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzM3ODUyMF19
+eyJoaXN0b3J5IjpbNjc1NTg1NDFdfQ==
 -->
