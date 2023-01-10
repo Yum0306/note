@@ -316,7 +316,7 @@ done
 ```  
 $ reboot  
 ```  
-### 6、验证  
+#### 7.验证  
 ```  
 $ uname -r  
 4.18.7-1.el7.elrepo.x86_64  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjczNzI4OF19
+eyJoaXN0b3J5IjpbODk3NTY4ODddfQ==
 -->
