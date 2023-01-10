@@ -225,7 +225,7 @@ ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="doc
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 
-### 内核升级
+## 内核升级
 更新yum源仓库  
 ```  
 $ yum -y update  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA2MjM2MjAzXX0=
+eyJoaXN0b3J5IjpbLTE4NDA2MDEwMDRdfQ==
 -->
