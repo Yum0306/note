@@ -194,7 +194,7 @@ nohup ./monitor.sh &
 rm ~/.local/share/baloo/ -rf
 ```
 
-#### 断网监听及重启docker服务脚本,挂上定是任务,即可时刻通过网络状态对服务管理
+#### 断网监听及重启docker服务脚本,挂上定是任务,即可时刻通过网络状态对服务
 ```
 #!/bin/bash
 server="www.baidu.com"
@@ -222,19 +222,19 @@ fi
 ```
 
 #### 通过JAVA启动参数配置及docker挂载配置,实现docker内java服务出现爆内存情况时自动重启docker服务
-```
+
 1.在Dockerfile中最后执行jar启动命令上添加 -XX:OnOutOfMemoryError和-XX:OnError 用于当出现OutOfMemory或者Error时执行命令
-
+```
 ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="docker restart service" -jar $JAR_FILE
-
+```
 2.在容器启动是挂载docker.sock和docker实现在容器内操作docker
-
+```
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1MTAwMDE5LC0xNjM3ODk3MjAwLDEzMz
-QxMTczMzYsLTM3MjEyODE4OSwxMzk5MjIwOTcyLC0yMDg1Nzk5
-NjU3LDEyMTA5OTM5NjMsLTg1NTY0Nzg4OCwxNDc3NTE5MzkwLC
-0xNTQ4NTY2OTg2LDQ4Mzk5ODg0MCwxMjA1MDI0MjgyLDUxNTA2
-OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbOTg3NDQ5MTA0LDcwNTEwMDAxOSwtMTYzNz
+g5NzIwMCwxMzM0MTE3MzM2LC0zNzIxMjgxODksMTM5OTIyMDk3
+MiwtMjA4NTc5OTY1NywxMjEwOTkzOTYzLC04NTU2NDc4ODgsMT
+Q3NzUxOTM5MCwtMTU0ODU2Njk4Niw0ODM5OTg4NDAsMTIwNTAy
+NDI4Miw1MTUwNjk4Miw1NDUzNjAyNzIsNDY3ODg2OTk5XX0=
 -->
