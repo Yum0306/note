@@ -3,18 +3,18 @@
 1. df -h 查看磁盘占用
 2. find / -type f -size +800M  查找磁盘上占用超过800M的文件
 3. find / -type f -size +800M 2>/dev/null | sort -hr | xargs ls -l 查找大于800M的文件并忽略权限不足提示 然后按照从大小到排序，然后在查看列表展示
-4. .对指定目录下超过指定大小的文件名称后缀是指定内容的文件进行置空操作
+4.对指定目录下超过指定大小的文件名称后缀是指定内容的文件进行置空操作
 find /var/lib/docker/containers/ -type f -size +10M -name "*-json.log" -exec truncate -s 0 {} \;
-5. uname -r 查看linux 的内核版本
-6. 添加用户组并添加当前用户到该用户组
+5.对指定相同后缀名的文件进行批量修改
+find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
+6. uname -r 查看linux 的内核版本
+7. 添加用户组并添加当前用户到该用户组
 sudo groupadd 用户组
 sudo gpasswd -a username  用户组
-7.清除内存中buff/cache占用 需要在root环境下执行
+8.清除内存中buff/cache占用 需要在root环境下执行
 echo 3> /proc/sys/vm/drop_caches
-8.查看指定文件md5值，判断文件是否被修改过
+9.查看指定文件md5值，判断文件是否被修改过
 md5sum 文件
-9.对指定相同后缀名的文件进行批量修改
-find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
 10.删除当前目录下名称叫做target的文件夹
 find ./ -d -name "target" | xargs rm -rf
 
@@ -359,5 +359,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTMyMzYzOF19
+eyJoaXN0b3J5IjpbLTI3OTk1MDI4Ml19
 -->
