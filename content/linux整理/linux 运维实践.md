@@ -355,6 +355,7 @@ $ yum install yum-utils
 ```  
 package-cleanup --oldkernels  
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MTMwODI4M119
+eyJoaXN0b3J5IjpbNzc4OTE4MjddfQ==
 -->
