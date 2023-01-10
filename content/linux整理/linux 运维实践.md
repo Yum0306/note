@@ -17,6 +17,8 @@ echo 3> /proc/sys/vm/drop_caches
 md5sum 文件
 10.删除当前目录下名称叫做target的文件夹
 find ./ -d -name "target" | xargs rm -rf
+11.找出当前目录下 排名前十的占用
+du -sh ./* | sort -hr | head
 
 ```
 
@@ -73,7 +75,8 @@ IPV6_FAILURE_FATAL="no"
 IPV6_ADDR_GEN_MODE="stable-privacy"
 NAME="eno1"
 UUID="cd7158bf-97de-4c11-aa53-8119c588a202"
-DEVICE="eno1"
+DEVICE="eno1"找出当前目录下 排名前十的占用
+du -sh ./* | sort -hr | head
 ONBOOT="yes"
 IPV6_PRIVACY="no"
 ```
@@ -141,8 +144,7 @@ Host 别称名
 
 ## 查找指定目录下的大文件
 ```
-找出当前目录下 排名前十的占用
-du -sh ./* | sort -hr | head
+
 ```
 
 ##  查找find命令
@@ -359,5 +361,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3OTk1MDI4Ml19
+eyJoaXN0b3J5IjpbMjYyMDU2Nzc2XX0=
 -->
