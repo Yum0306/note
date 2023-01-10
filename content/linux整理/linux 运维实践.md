@@ -15,6 +15,8 @@ md5sum 文件
 find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
 8.对指定目录下超过指定大小的文件名称后缀是指定内容的文件进行置空操作
 find /var/lib/docker/containers/ -type f -size +10M -name "*-json.log" -exec truncate -s 0 {} \;
+9.删除当前目录下名称叫做target的文件夹
+find ./ -d -name "target" | xargs rm -rf
 
 ```
 
@@ -146,7 +148,7 @@ du -sh ./* | sort -hr | head
 ##  查找find命令
 ```
 eg: 查找当前指定目录下 所有的target目录 并且删除 -d代表的是 查找目录
-find ./ -d -name "target" | xargs rm -rf
+
 ```
 
 ## SSH免密登录 + inotify-tools文件监听 + Docker 实现自动部署
@@ -357,5 +359,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMjUyOTg2Ml19
+eyJoaXN0b3J5IjpbLTI5Mzc4Njk2Nl19
 -->
