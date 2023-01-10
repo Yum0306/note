@@ -193,9 +193,35 @@ nohup ./monitor.sh &
 删除index
 rm ~/.local/share/baloo/ -rf
 ```
+
+#### 断网监听及重启docker服务脚本
+```
+#!/bin/bash
+server="www.baidu.com"
+temp=${HOME}/status.temp
+if [ ! -d $temp ];then
+    touch $temp
+fi
+chmod 777 $temp
+echo `date "+%Y-%m-%d %H:%M:%S"`
+ping $server -W 5 -c 2
+if [ $? != 0 ];then
+    echo "网络断开了!!"
+    echo "NETWORK_CONNECTING=FALSE" > $temp
+else
+    echo "网络连上了!!"
+    result=$(echo `head -n +1 $temp | cut -d= -f 2` | grep "FALSE")
+    echo $result
+    if [ ! -z $result ];then
+        echo "2222网络连上了!!!!"
+        docker restart platform
+    fi
+    echo "NETWORK_CONNECTING=TRUE" > $temp
+fi
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODU3OTk2NTcsMTIxMDk5Mzk2MywtOD
-U1NjQ3ODg4LDE0Nzc1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4
-ODQwLDEyMDUwMjQyODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nz
-g4Njk5OV19
+eyJoaXN0b3J5IjpbMTM5OTIyMDk3MiwtMjA4NTc5OTY1NywxMj
+EwOTkzOTYzLC04NTU2NDc4ODgsMTQ3NzUxOTM5MCwtMTU0ODU2
+Njk4Niw0ODM5OTg4NDAsMTIwNTAyNDI4Miw1MTUwNjk4Miw1ND
+UzNjAyNzIsNDY3ODg2OTk5XX0=
 -->
