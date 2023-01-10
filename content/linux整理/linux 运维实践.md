@@ -265,7 +265,7 @@ kernel-ml-tools-libs-devel.x86_64                                               
 perf.x86_64                                                                                       4.18.7-1.el7.elrepo                                                                   elrepo-kernel  
 python-perf.x86_64                                                                                4.18.7-1.el7.elrepo                                                                   elrepo-  
 ```  
-### 4、安装最新版本内核  
+#### 5.安装最新版本内核  
 ```  
 $ yum --enablerepo=elrepo-kernel install kernel-ml  
 ```  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MDY3MjMzOF19
+eyJoaXN0b3J5IjpbMzE4ODg1Mjk1XX0=
 -->
