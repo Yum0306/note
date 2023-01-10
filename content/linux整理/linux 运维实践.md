@@ -1,4 +1,4 @@
-# linux 运维实践
+##常用命令
 ```
 1. df -h 查看磁盘占用
 2. find / -type f -size +800M  查找磁盘上占用超过800M的文件
@@ -357,5 +357,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc4OTE4MjddfQ==
+eyJoaXN0b3J5IjpbMjAwMjUyOTg2Ml19
 -->
