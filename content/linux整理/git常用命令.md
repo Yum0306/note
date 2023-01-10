@@ -1,5 +1,4 @@
 ## git配置
-# git ssh 配置  
 ```  
 ssh-keygen -t rsa -C "i@vim.plus"  
 会在系统用户更目录下.ssh文件夹生成id_rsa(私钥)、id_rsa.pub（公钥）文件  
@@ -12,7 +11,7 @@ win下需要执行
 linux 应该只需要执行3即可  
 然后再正常执行 git init add 等操作  
 ```  
-#git .gitignore  
+##  .gitignore  
 ```  
 HELP.md  
 target/  
@@ -51,7 +50,7 @@ build/
 .vscode/  
   
 ```  
-# git ssh 非22端口  
+## git ssh 非22端口  
 ```  
 ssh -T -p222 git@127.0.0.1 可以测试配置git ssh免密之后是否生效  
 git remote add origin ssh://git@127.0.0.1:222/java/test.git  
@@ -106,5 +105,5 @@ linux 应该只需要执行3即可
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ1NzM3NTc4XX0=
+eyJoaXN0b3J5IjpbLTQxNDQ1ODEwOF19
 -->
