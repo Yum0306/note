@@ -16,12 +16,12 @@ Jpa本身还提供了一些自定义声明方法的规则，例如：在接口�
 - 13.NotIn,与上等价。不在什么里面 数组
 - 14.top/limit 查询方法结果的数量通过关键字限制 默认1，可以加数字指定返回最大结果
 例如:
-User findFirstByOrderByLastnameAsc();
-User findTopByOrderByAgeDesc();
-Page<User> queryFirst10ByLastname(String lastname, Pageable pageable);
-Slice<User> findTop3ByLastname(String lastname, Pageable pageable);
-List<User> findFirst10ByLastname(String lastname, Sort sort);
-List<User> findTop10ByLastname(String lastname, Pageable pageable);
+- User findFirstByOrderByLastnameAsc();
+- User findTopByOrderByAgeDesc();
+- Page<User> queryFirst10ByLastname(String lastname, Pageable pageable);
+- Slice<User> findTop3ByLastname(String lastname, Pageable pageable);
+- List<User> findFirst10ByLastname(String lastname, Sort sort);
+- List<User> findTop10ByLastname(String lastname, Pageable pageable);
 你同样可以写一个自定义的方法，使用@Query注解+HQL语句实现你想要的效果
   
 ## 
@@ -55,5 +55,5 @@ List<User> findTop10ByLastname(String lastname, Pageable pageable);
 | `False`             | `findByActiveFalse()`                                        | `… where x.active = false`                                   |  
 | `IgnoreCase`        | `findByFirstnameIgnoreCase`                                  | `… where UPPER(x.firstame) = UPPER(?1)`                      |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NjIzNDc5NCwtMTgyODkzNzc0OF19
+eyJoaXN0b3J5IjpbMjk1NTQ5NzAwLC0xODI4OTM3NzQ4XX0=
 -->
