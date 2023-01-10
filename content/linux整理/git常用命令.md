@@ -1,7 +1,7 @@
 
 
 
-## git
+## git常用命令
 ```
 git config --global user.name "qyc"   //初始化本地的git用户名 和远程的帐户名和密码无关 只是让其他开发协作者能知道是谁提交的
 git config --global user.email "i@vim.plus"  //初始化本地git的邮箱
@@ -49,5 +49,5 @@ linux 应该只需要执行3即可
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzQwODM2M119
+eyJoaXN0b3J5IjpbLTE1OTk3MzYxNzJdfQ==
 -->
