@@ -226,13 +226,14 @@ fi
 
 ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="docker restart service" -jar $JAR_FILE
 
-2.在容器启动是挂在docker.sock和docker实现在容器内操作docker
+2.在容器启动是挂载docker.sock和docker实现在容器内操作docker
 
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MjEyODE4OSwxMzk5MjIwOTcyLC0yMD
-g1Nzk5NjU3LDEyMTA5OTM5NjMsLTg1NTY0Nzg4OCwxNDc3NTE5
-MzkwLC0xNTQ4NTY2OTg2LDQ4Mzk5ODg0MCwxMjA1MDI0MjgyLD
-UxNTA2OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
+eyJoaXN0b3J5IjpbMTMzNDExNzMzNiwtMzcyMTI4MTg5LDEzOT
+kyMjA5NzIsLTIwODU3OTk2NTcsMTIxMDk5Mzk2MywtODU1NjQ3
+ODg4LDE0Nzc1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLD
+EyMDUwMjQyODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5
+OV19
 -->
