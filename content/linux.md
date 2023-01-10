@@ -224,10 +224,11 @@ fi
 ```
 1.在Dockerfile中添加
 ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart platform" -XX:OnError="docker restart platform" -Dspring.profiles.active=$SPRING_PROFILES_ACTIVE   -Dserver.port=$START_PORT -Dsystem.env=$START_ENV -jar $JAR_FILE
-2.在容器启动是挂在docker.sock和docker
+2.在容器启动是挂在docker.sock和docker实现在容器内操作docker
+docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4OTY1OTEzLDEzOTkyMjA5NzIsLTIwOD
+eyJoaXN0b3J5IjpbMzM3MDY0NzQ0LDEzOTkyMjA5NzIsLTIwOD
 U3OTk2NTcsMTIxMDk5Mzk2MywtODU1NjQ3ODg4LDE0Nzc1MTkz
 OTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMDUwMjQyODIsNT
 E1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
