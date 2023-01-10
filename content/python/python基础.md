@@ -342,97 +342,56 @@ False
 # 4.字符串格式化符号含义及转义字符含
 
 **字符串格式化符号含义**
-
 | **符号** | **说明** |
-
 | --- | --- |
-
 | %c | 格式化字符及其 ASCII 码 |
-
 | %s | 格式化字符串 |
-
 | %d | 格式化整数 |
-
 | %o | 格式化无符号八进制数 |
-
 | %x | 格式化无符号十六进制数 |
-
 | %X | 格式化无符号十六进制数（大写） |
-
 | %f | 格式化浮点数字，可指定小数点后的精度 |
-
 | %e | 用科学计数法格式化浮点数 |
-
 | %E | 作用同 %e，用科学计数法格式化浮点数 |
-
 | %g | 根据值的大小决定使用 %f 或 %e |
-
 | %G | 作用同 %g，根据值的大小决定使用 %f 或者 %E |
-
 
 
 **格式化操作符辅助命令**
 
 | **符号** | **说明** |
-
 | --- | --- |
-
 | m.n | m 是显示的最小总宽度，n 是小数点后的位数 |
-
 | \- | 用于左对齐 |
-
 | + | 在正数前面显示加号（+） |
-
 | # | 在八进制数前面显示 '0o'，在十六进制数前面显示 '0x' 或 '0X' |
-
 | 0 | 显示的数字前面填充 '0' 取代空格 |
-
 **Python 的转义字符及其含义**
 
 | **符号** | **说明** |
-
 | --- | --- |
-
 | ' | 单引号 |
-
 | " | 双引号 |
-
 | \\a | 发出系统响铃声 |
-
 | \\b | 退格符 |
-
 | \\n | 换行符 |
-
 | \\t | 横向制表符（TAB） |
-
 | \\v | 纵向制表符 |
-
 | \\r | 回车符 |
-
 | \\f | 换页符 |
-
 | \\o | 八进制数代表的字符 |
-
 | \\x | 十六进制数代表的字符 |
-
 | \\0 | 表示一个空字符 |
-
 | \\ | 反斜杠 |
-
 # 序列
 
 **list**(列表)
-
 ~~~
-
 If no argument is given, the constructor creates a new empty list.
-
 | The argument must be an iterable if specified.
-
 ~~~
 
 如果没有给出参数，构造函数将创建一个新的空列表。
-
 如果指定，参数必须是可迭代的。
 
 ## 迭代器：
@@ -440,7 +399,6 @@ If no argument is given, the constructor creates a new empty list.
 **重复反馈过程的活动就是 迭代 其目的通常是为了接近或者达到所需的目标 每次对这个过程的重复称作迭代，而每一次迭代得到的结果都会被作为下一次迭代的初始值**
 
 tuple(元祖)
-
 ~~~
 
 | If no argument is given, the constructor returns an empty tuple.
@@ -1689,5 +1647,5 @@ x = property(getPages,setPages,delPages)
 
 | **contains**(self, item) | 定义当使用成员测试运算符（in 或 not in）时的行为 |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjA5ODMwMV19
+eyJoaXN0b3J5IjpbMjU5NDI2NTU1XX0=
 -->
