@@ -237,11 +237,11 @@ ELRepo 聚焦于和硬件相关的软件包，包括文件系统驱动、显卡�
 ```  
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org  
 ```  
-#### 安装ELRepo仓库的yum源  
+#### 3.安装ELRepo仓库的yum源  
 ```  
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm  
 ```  
-3、查看可用的系统内核包  
+#### 4.查看可用的系统内核包  
 可以看到4.4和4.18两个版本  
 ```  
 yum --disablerepo="*" --enablerepo="elrepo-kernel" list available  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUwNjEyNzUzXX0=
+eyJoaXN0b3J5IjpbMTA4MDY3MjMzOF19
 -->
