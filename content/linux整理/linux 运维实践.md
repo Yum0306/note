@@ -9,13 +9,13 @@ find /var/lib/docker/containers/ -type f -size +10M -name "*-json.log" -exec tru
 6. 添加用户组并添加当前用户到该用户组
 sudo groupadd 用户组
 sudo gpasswd -a username  用户组
-5.清除内存中buff/cache占用 需要在root环境下执行
+7.清除内存中buff/cache占用 需要在root环境下执行
 echo 3> /proc/sys/vm/drop_caches
-6.查看指定文件md5值，判断文件是否被修改过
+8.查看指定文件md5值，判断文件是否被修改过
 md5sum 文件
-7.对指定相同后缀名的文件进行批量修改
+9.对指定相同后缀名的文件进行批量修改
 find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
-8.删除当前目录下名称叫做target的文件夹
+10.删除当前目录下名称叫做target的文件夹
 find ./ -d -name "target" | xargs rm -rf
 
 ```
@@ -359,5 +359,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDI0MDQ5MjVdfQ==
+eyJoaXN0b3J5IjpbLTUzNTMyMzYzOF19
 -->
