@@ -194,7 +194,7 @@ nohup ./monitor.sh &
 rm ~/.local/share/baloo/ -rf
 ```
 
-#### 断网监听及重启docker服务脚本
+#### 断网监听及重启docker服务脚本,挂上定是任务,即可时刻通过网络状态对服务管理
 ```
 #!/bin/bash
 server="www.baidu.com"
@@ -232,9 +232,9 @@ ENTRYPOINT java -XX:OnOutOfMemoryError="docker restart service" -XX:OnError="doc
 docker run -itd -p 8080:8080 --name service -e  -v /var/run/docker.sock:/var/run/docker.sock  -v /usr/bin/docker:/usr/bin/docker   --restart=always  xxxx:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc4OTcyMDAsMTMzNDExNzMzNiwtMz
-cyMTI4MTg5LDEzOTkyMjA5NzIsLTIwODU3OTk2NTcsMTIxMDk5
-Mzk2MywtODU1NjQ3ODg4LDE0Nzc1MTkzOTAsLTE1NDg1NjY5OD
-YsNDgzOTk4ODQwLDEyMDUwMjQyODIsNTE1MDY5ODIsNTQ1MzYw
-MjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbNzA1MTAwMDE5LC0xNjM3ODk3MjAwLDEzMz
+QxMTczMzYsLTM3MjEyODE4OSwxMzk5MjIwOTcyLC0yMDg1Nzk5
+NjU3LDEyMTA5OTM5NjMsLTg1NTY0Nzg4OCwxNDc3NTE5MzkwLC
+0xNTQ4NTY2OTg2LDQ4Mzk5ODg0MCwxMjA1MDI0MjgyLDUxNTA2
+OTgyLDU0NTM2MDI3Miw0Njc4ODY5OTldfQ==
 -->
