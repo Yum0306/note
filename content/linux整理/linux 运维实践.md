@@ -321,7 +321,7 @@ $ reboot
 $ uname -r  
 4.18.7-1.el7.elrepo.x86_64  
 ```  
-### 7、删除旧内核（可选）  
+#### 8.删除旧内核（可选）  
 查看系统中全部的内核：  
 ```  
 $ rpm -qa | grep kernel  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3NTY4ODddfQ==
+eyJoaXN0b3J5IjpbLTQzMTkzOTA3Ml19
 -->
