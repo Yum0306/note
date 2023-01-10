@@ -13,6 +13,8 @@ echo 3> /proc/sys/vm/drop_caches
 md5sum 文件
 7.对指定相同后缀名的文件进行批量修改
 find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
+8.对指定目录下超过指定大小的文件名称后缀是指定内容的文件进行置空操作
+find /var/lib/docker/containers/ -type f -size +10M -name "*-json.log" -exec truncate -s 0 {} \;
 
 ```
 
@@ -192,7 +194,8 @@ nohup ./monitor.sh &
 rm ~/.local/share/baloo/ -rf
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMDk5Mzk2MywtODU1NjQ3ODg4LDE0Nz
-c1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4ODQwLDEyMDUwMjQy
-ODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nzg4Njk5OV19
+eyJoaXN0b3J5IjpbLTIwODU3OTk2NTcsMTIxMDk5Mzk2MywtOD
+U1NjQ3ODg4LDE0Nzc1MTkzOTAsLTE1NDg1NjY5ODYsNDgzOTk4
+ODQwLDEyMDUwMjQyODIsNTE1MDY5ODIsNTQ1MzYwMjcyLDQ2Nz
+g4Njk5OV19
 -->
