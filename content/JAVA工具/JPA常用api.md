@@ -1,20 +1,20 @@
 ## 自定义方法的实现:
 
 Jpa本身还提供了一些自定义声明方法的规则，例如：在接口中使用关键字findBy、readBy、getBy作为方法名的前缀，拼接实体类中的属性字段（首字母大写），并可选择拼接一些SQL关键字来组合成一个查询方法，例如，对于用户实体，关键字可以这样使用
-- 1.And，如：findByIdAndName(Long id, String name); 并且
-- 2.Or,如：findByIdOrName(Long id, String name); 或者
-- 3.Between,如：findByCreateDateBetween(Date start, Date end); 在之间
-- 4.LessThan,如：findByCreateDateLessThan(Date start); 小于
-- 5.GreaterThan,如：findByCreateDateGreaterThan(Date start); 大于
-- 6.IsNull,如：findByNameIsNull(); 空
-- 7.IsNotNull,与上等价 不等于空
-- 8.Like,如：findByNameLike(String name); 模糊查询
-- 9.NotLike:与上等价 不模糊
-- 10.OrderBy,如：findByNameOrderByIdAsc(String name); 排序
-- 11.Not,如：findByNameNot(String name); 不得于
-- 12.In,如：findByNameIn(Collection<String> nameList); 在什么里面 数组
-- 13.NotIn,与上等价。不在什么里面 数组
-- 14.top/limit 查询方法结果的数量通过关键字限制 默认1，可以加数字指定返回最大结果
+1. And，如：findByIdAndName(Long id, String name); 并且
+2. Or,如：findByIdOrName(Long id, String name); 或者
+3. Between,如：findByCreateDateBetween(Date start, Date end); 在之间
+4. LessThan,如：findByCreateDateLessThan(Date start); 小于
+5. GreaterThan,如：findByCreateDateGreaterThan(Date start); 大于
+6. IsNull,如：findByNameIsNull(); 空
+7. IsNotNull,与上等价 不等于空
+8. Like,如：findByNameLike(String name); 模糊查询
+9. NotLike:与上等价 不模糊
+10. OrderBy,如：findByNameOrderByIdAsc(String name); 排序
+11. Not,如：findByNameNot(String name); 不得于
+12. In,如：findByNameIn(Collection<String> nameList); 在什么里面 数组
+13. NotIn,与上等价。不在什么里面 数组
+14. top/limit 查询方法结果的数量通过关键字限制 默认1，可以加数字指定返回最大结果
 例如:
 - User findFirstByOrderByLastnameAsc();
 - User findTopByOrderByAgeDesc();
@@ -55,5 +55,5 @@ Jpa本身还提供了一些自定义声明方法的规则，例如：在接口�
 | `False`             | `findByActiveFalse()`                                        | `… where x.active = false`                                   |  
 | `IgnoreCase`        | `findByFirstnameIgnoreCase`                                  | `… where UPPER(x.firstame) = UPPER(?1)`                      |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1NTQ5NzAwLC0xODI4OTM3NzQ4XX0=
+eyJoaXN0b3J5IjpbMTgwNTQxMDk5MiwtMTgyODkzNzc0OF19
 -->
