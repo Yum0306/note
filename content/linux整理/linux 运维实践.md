@@ -270,7 +270,7 @@ python-perf.x86_64                                                              
 $ yum --enablerepo=elrepo-kernel install kernel-ml  
 ```  
 --enablerepo 选项开启 CentOS 系统上的指定仓库。默认开启的是 elrepo，这里用 elrepo-kernel 替换。  
-### 5、设置 grub2  
+#### 6.设置 grub2  
 内核安装好后，需要设置为默认启动选项并重启后才会生效  
 查看系统上的所有可用内核：  
 ```  
@@ -350,5 +350,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4ODg1Mjk1XX0=
+eyJoaXN0b3J5IjpbLTMyMjczNzI4OF19
 -->
