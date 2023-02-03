@@ -19,6 +19,8 @@ md5sum 文件
 find ./ -d -name "target" | xargs rm -rf
 11.找出当前目录下 排名前十的占用
 du -sh ./* | sort -hr | head
+12.查看当前机器ip 只显示ip
+ip addr show|grep -A1 'inet [^f:]'|sed -nr 's#^ +inet ([0-9.]+)/[0-9]+ brd [0-9./]+ scope global .*#\1#p'
 
 ```
 
@@ -350,5 +352,5 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMTkzOTA3Ml19
+eyJoaXN0b3J5IjpbMjAzNDgwMTA3LC00MzE5MzkwNzJdfQ==
 -->
