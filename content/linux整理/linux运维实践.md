@@ -21,6 +21,8 @@ find ./ -d -name "target" | xargs rm -rf
 du -sh ./* | sort -hr | head
 12.查看当前机器ip 只显示ip
 ip addr show|grep -A1 'inet [^f:]'|sed -nr 's#^ +inet ([0-9.]+)/[0-9]+ brd [0-9./]+ scope global .*#\1#p'
+10.查看网卡
+nmcli connection show
 
 ```
 
@@ -352,5 +354,6 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDgwMTA3LC00MzE5MzkwNzJdfQ==
+eyJoaXN0b3J5IjpbLTIwMTM0NDMwODgsMjAzNDgwMTA3LC00Mz
+E5MzkwNzJdfQ==
 -->
