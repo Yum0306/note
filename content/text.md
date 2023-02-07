@@ -14,10 +14,11 @@ find /home/mnt/yatai-java/data/upload/school/ -type d -regextype "awk" -regex "(
 
 ```
 等保会议记录
-1.
+1.邮件发布管理制度
+2.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzOTIzMTkwMSwyMTMyOTgzNTk1LDExNj
-k4NjQ4MDAsMTYyMDQzMjM5MCwtMTg3ODA3MjMzNywtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbLTE3NDIzNDA1NDQsLTUzOTIzMTkwMSwyMT
+MyOTgzNTk1LDExNjk4NjQ4MDAsMTYyMDQzMjM5MCwtMTg3ODA3
+MjMzNywtMjA4ODc0NjYxMl19
 -->
