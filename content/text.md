@@ -18,9 +18,9 @@ find /home/mnt/yatai-java/data/upload/school/ -type d -regextype "awk" -regex "(
 2.
 ```
 
-# 慢江红 别去
+# 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTc5MjM2NCwtMTc0MjM0MDU0NCwtNT
-M5MjMxOTAxLDIxMzI5ODM1OTUsMTE2OTg2NDgwMCwxNjIwNDMy
-MzkwLC0xODc4MDcyMzM3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTIxMTIwMzYyNTcsLTE3NDIzNDA1NDQsLT
+UzOTIzMTkwMSwyMTMyOTgzNTk1LDExNjk4NjQ4MDAsMTYyMDQz
+MjM5MCwtMTg3ODA3MjMzNywtMjA4ODc0NjYxMl19
 -->
