@@ -38,12 +38,13 @@ _starttransfer}\ntime_total:%{time_total}
 
 ```
 1.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
-2.
+2.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 ```
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzU5NjEwNCwyMTAwMjY4NjM4LDcyMz
-kxMDI3NywtMjExMjAzNjI1NywtMTc0MjM0MDU0NCwtNTM5MjMx
-OTAxLDIxMzI5ODM1OTUsMTE2OTg2NDgwMCwxNjIwNDMyMzkwLC
-0xODc4MDcyMzM3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5NDA0MzQwMzQsLTY1NzU5NjEwNCwyMT
+AwMjY4NjM4LDcyMzkxMDI3NywtMjExMjAzNjI1NywtMTc0MjM0
+MDU0NCwtNTM5MjMxOTAxLDIxMzI5ODM1OTUsMTE2OTg2NDgwMC
+wxNjIwNDMyMzkwLC0xODc4MDcyMzM3LC0yMDg4NzQ2NjEyXX0=
+
 -->
