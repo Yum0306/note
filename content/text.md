@@ -36,11 +36,14 @@ yHty5t8_C8J5mhgxpri3VeDVnbFk_3pncskM" -X POST -d '{"pageNo":1,"pageSize":50,"par
 ation/schQuestion/query" -o output1.txt -s -w time_namelookup:%{time_namelookup}\ntime_connect:%{time_connect}\ntime_starttransfer:%{time  
 _starttransfer}\ntime_total:%{time_total}
 
-
-docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'START_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  docker pull swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+```
+1.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+2.
+```
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMDI2ODYzOCw3MjM5MTAyNzcsLTIxMT
-IwMzYyNTcsLTE3NDIzNDA1NDQsLTUzOTIzMTkwMSwyMTMyOTgz
-NTk1LDExNjk4NjQ4MDAsMTYyMDQzMjM5MCwtMTg3ODA3MjMzNy
-wtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTY1NzU5NjEwNCwyMTAwMjY4NjM4LDcyMz
+kxMDI3NywtMjExMjAzNjI1NywtMTc0MjM0MDU0NCwtNTM5MjMx
+OTAxLDIxMzI5ODM1OTUsMTE2OTg2NDgwMCwxNjIwNDMyMzkwLC
+0xODc4MDcyMzM3LC0yMDg4NzQ2NjEyXX0=
 -->
