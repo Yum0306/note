@@ -37,13 +37,13 @@ ation/schQuestion/query" -o output1.txt -s -w time_namelookup:%{time_namelookup}
 _starttransfer}\ntime_total:%{time_total}
 
 ```
-1.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud'-e 'JAVA_OPTIONS=\'-Xmx20480m -Xms10240m -Duser.timezone=Asia/Shanghai' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+1.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud'-e 'JAVA_OPTIONS=-Xmx20480m -Xms10240m -Duser.timezone=Asia/Shanghai' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 
 2.docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 ```
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTcxOTIzNTUsLTE5NDA0MzQwMzQsLT
+eyJoaXN0b3J5IjpbLTE4NDEwMTM0OTIsLTE5NDA0MzQwMzQsLT
 Y1NzU5NjEwNCwyMTAwMjY4NjM4LDcyMzkxMDI3NywtMjExMjAz
 NjI1NywtMTc0MjM0MDU0NCwtNTM5MjMxOTAxLDIxMzI5ODM1OT
 UsMTE2OTg2NDgwMCwxNjIwNDMyMzkwLC0xODc4MDcyMzM3LC0y
