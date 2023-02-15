@@ -43,10 +43,13 @@ _starttransfer}\ntime_total:%{time_total}
 3.docker pull swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 ```
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTI1NDgxNiwxOTgyODk2MTI0LC0xOD
-QxMDEzNDkyLC0xOTQwNDM0MDM0LC02NTc1OTYxMDQsMjEwMDI2
-ODYzOCw3MjM5MTAyNzcsLTIxMTIwMzYyNTcsLTE3NDIzNDA1ND
-QsLTUzOTIzMTkwMSwyMTMyOTgzNTk1LDExNjk4NjQ4MDAsMTYy
-MDQzMjM5MCwtMTg3ODA3MjMzNywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMjA0NzU5NTAwNCwxNzU5MjU0ODE2LDE5OD
+I4OTYxMjQsLTE4NDEwMTM0OTIsLTE5NDA0MzQwMzQsLTY1NzU5
+NjEwNCwyMTAwMjY4NjM4LDcyMzkxMDI3NywtMjExMjAzNjI1Ny
+wtMTc0MjM0MDU0NCwtNTM5MjMxOTAxLDIxMzI5ODM1OTUsMTE2
+OTg2NDgwMCwxNjIwNDMyMzkwLC0xODc4MDcyMzM3LC0yMDg4Nz
+Q2NjEyXX0=
 -->
