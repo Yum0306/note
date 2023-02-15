@@ -44,12 +44,17 @@ _starttransfer}\ntime_total:%{time_total}
 ```
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 
-
+```
+学生替换笔记图片
+只替换文件
+其他端就会有缓存，显示的还是原图
+主要是kua's
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NzU5NTAwNCwxNzU5MjU0ODE2LDE5OD
-I4OTYxMjQsLTE4NDEwMTM0OTIsLTE5NDA0MzQwMzQsLTY1NzU5
-NjEwNCwyMTAwMjY4NjM4LDcyMzkxMDI3NywtMjExMjAzNjI1Ny
-wtMTc0MjM0MDU0NCwtNTM5MjMxOTAxLDIxMzI5ODM1OTUsMTE2
-OTg2NDgwMCwxNjIwNDMyMzkwLC0xODc4MDcyMzM3LC0yMDg4Nz
-Q2NjEyXX0=
+eyJoaXN0b3J5IjpbLTM2ODg0MjE2OSwyMDQ3NTk1MDA0LDE3NT
+kyNTQ4MTYsMTk4Mjg5NjEyNCwtMTg0MTAxMzQ5MiwtMTk0MDQz
+NDAzNCwtNjU3NTk2MTA0LDIxMDAyNjg2MzgsNzIzOTEwMjc3LC
+0yMTEyMDM2MjU3LC0xNzQyMzQwNTQ0LC01MzkyMzE5MDEsMjEz
+Mjk4MzU5NSwxMTY5ODY0ODAwLDE2MjA0MzIzOTAsLTE4NzgwNz
+IzMzcsLTIwODg3NDY2MTJdfQ==
 -->
