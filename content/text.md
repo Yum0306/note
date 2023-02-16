@@ -50,11 +50,18 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 其他端就会有缓存，显示的还是原图
 主要是跨设备 a设备已经下载，b设备更新 a设备不知道已经更新
 ```
+
+
+```
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:10240_1
+
+docker stop platform && docker rm platform && docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:10240_1
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDEzNTI1NywyMDQ3NTk1MDA0LDE3NT
-kyNTQ4MTYsMTk4Mjg5NjEyNCwtMTg0MTAxMzQ5MiwtMTk0MDQz
-NDAzNCwtNjU3NTk2MTA0LDIxMDAyNjg2MzgsNzIzOTEwMjc3LC
-0yMTEyMDM2MjU3LC0xNzQyMzQwNTQ0LC01MzkyMzE5MDEsMjEz
-Mjk4MzU5NSwxMTY5ODY0ODAwLDE2MjA0MzIzOTAsLTE4NzgwNz
-IzMzcsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTM0NzMzMzA3OCwxNTY0MTM1MjU3LDIwND
+c1OTUwMDQsMTc1OTI1NDgxNiwxOTgyODk2MTI0LC0xODQxMDEz
+NDkyLC0xOTQwNDM0MDM0LC02NTc1OTYxMDQsMjEwMDI2ODYzOC
+w3MjM5MTAyNzcsLTIxMTIwMzYyNTcsLTE3NDIzNDA1NDQsLTUz
+OTIzMTkwMSwyMTMyOTgzNTk1LDExNjk4NjQ4MDAsMTYyMDQzMj
+M5MCwtMTg3ODA3MjMzNywtMjA4ODc0NjYxMl19
 -->
