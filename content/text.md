@@ -64,16 +64,14 @@ docker stop platform && docker rm platform && docker run -itd -p 8080:8080 --nam
 ```
 
 ```
-docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=cl  
-oud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always swr.cn-north-1.myhuaweicloud.com/y  
-twlrj/platform-temp:1.2
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIwNzM5MzUsLTE0NzAxNTEwMDQsMTMxOD
-AyODY2NCwtMTc1Nzg3MDI3NSwxNTY0MTM1MjU3LDIwNDc1OTUw
-MDQsMTc1OTI1NDgxNiwxOTgyODk2MTI0LC0xODQxMDEzNDkyLC
-0xOTQwNDM0MDM0LC02NTc1OTYxMDQsMjEwMDI2ODYzOCw3MjM5
-MTAyNzcsLTIxMTIwMzYyNTcsLTE3NDIzNDA1NDQsLTUzOTIzMT
-kwMSwyMTMyOTgzNTk1LDExNjk4NjQ4MDAsMTYyMDQzMjM5MCwt
-MTg3ODA3MjMzN119
+eyJoaXN0b3J5IjpbMTQyOTYxODcwMywtMTQ3MDE1MTAwNCwxMz
+E4MDI4NjY0LC0xNzU3ODcwMjc1LDE1NjQxMzUyNTcsMjA0NzU5
+NTAwNCwxNzU5MjU0ODE2LDE5ODI4OTYxMjQsLTE4NDEwMTM0OT
+IsLTE5NDA0MzQwMzQsLTY1NzU5NjEwNCwyMTAwMjY4NjM4LDcy
+MzkxMDI3NywtMjExMjAzNjI1NywtMTc0MjM0MDU0NCwtNTM5Mj
+MxOTAxLDIxMzI5ODM1OTUsMTE2OTg2NDgwMCwxNjIwNDMyMzkw
+LC0xODc4MDcyMzM3XX0=
 -->
