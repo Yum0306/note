@@ -73,7 +73,7 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 docker run -itd -p 8080:8080 --name platform-temp -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=school' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always platform-temp:v1.2
 
 prod:
-docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=cloud' -e 'SYSTEM_ENV=school' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=cloud' -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
 
 重庆办：
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=school' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
@@ -85,11 +85,11 @@ docker run -itd -p 8080:8080 --name platform-temp -e 'SPRING_PROFILES_ACTIVE=pro
 docker run -itd -p 8080:8080 --name platform-temp -e 'SPRING_PROFILES_ACTIVE=pro' -e 'START_PORT=8080' -e 'START_ENV=school' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTA5MTIwNiwtMTQyNjA0Nzk3MywxMj
-g2Njk2MDIzLC02ODY5MTQxNjQsMTQyOTYxODcwMywtMTQ3MDE1
-MTAwNCwxMzE4MDI4NjY0LC0xNzU3ODcwMjc1LDE1NjQxMzUyNT
-csMjA0NzU5NTAwNCwxNzU5MjU0ODE2LDE5ODI4OTYxMjQsLTE4
-NDEwMTM0OTIsLTE5NDA0MzQwMzQsLTY1NzU5NjEwNCwyMTAwMj
-Y4NjM4LDcyMzkxMDI3NywtMjExMjAzNjI1NywtMTc0MjM0MDU0
-NCwtNTM5MjMxOTAxXX0=
+eyJoaXN0b3J5IjpbODA2NzE1MzcsMjEzOTA5MTIwNiwtMTQyNj
+A0Nzk3MywxMjg2Njk2MDIzLC02ODY5MTQxNjQsMTQyOTYxODcw
+MywtMTQ3MDE1MTAwNCwxMzE4MDI4NjY0LC0xNzU3ODcwMjc1LD
+E1NjQxMzUyNTcsMjA0NzU5NTAwNCwxNzU5MjU0ODE2LDE5ODI4
+OTYxMjQsLTE4NDEwMTM0OTIsLTE5NDA0MzQwMzQsLTY1NzU5Nj
+EwNCwyMTAwMjY4NjM4LDcyMzkxMDI3NywtMjExMjAzNjI1Nywt
+MTc0MjM0MDU0NF19
 -->
