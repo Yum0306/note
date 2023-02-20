@@ -72,13 +72,15 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 12170:
 docker run -itd -p 8080:8080 --name platform-temp -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=school' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always platform-temp:v1.2
 
+prod:
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=cloud' -e 'SYSTEM_ENV=school' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NDc2MTU3NCwxNDI5NjE4NzAzLC0xND
-cwMTUxMDA0LDEzMTgwMjg2NjQsLTE3NTc4NzAyNzUsMTU2NDEz
-NTI1NywyMDQ3NTk1MDA0LDE3NTkyNTQ4MTYsMTk4Mjg5NjEyNC
-wtMTg0MTAxMzQ5MiwtMTk0MDQzNDAzNCwtNjU3NTk2MTA0LDIx
-MDAyNjg2MzgsNzIzOTEwMjc3LC0yMTEyMDM2MjU3LC0xNzQyMz
-QwNTQ0LC01MzkyMzE5MDEsMjEzMjk4MzU5NSwxMTY5ODY0ODAw
-LDE2MjA0MzIzOTBdfQ==
+eyJoaXN0b3J5IjpbNjQyNjM4NTMxLDE0Mjk2MTg3MDMsLTE0Nz
+AxNTEwMDQsMTMxODAyODY2NCwtMTc1Nzg3MDI3NSwxNTY0MTM1
+MjU3LDIwNDc1OTUwMDQsMTc1OTI1NDgxNiwxOTgyODk2MTI0LC
+0xODQxMDEzNDkyLC0xOTQwNDM0MDM0LC02NTc1OTYxMDQsMjEw
+MDI2ODYzOCw3MjM5MTAyNzcsLTIxMTIwMzYyNTcsLTE3NDIzND
+A1NDQsLTUzOTIzMTkwMSwyMTMyOTgzNTk1LDExNjk4NjQ4MDAs
+MTYyMDQzMjM5MF19
 -->
