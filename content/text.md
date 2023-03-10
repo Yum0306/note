@@ -91,14 +91,14 @@ prod:
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx10240m -Xms2048m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080'  -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/yt_logs:/yatai-java/yt_logs --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 
 yatai-log:
-docker run -itd -p 8085:8080 --name yatai-log -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx4096m -Xms1024m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080'  -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/yt_logs:/yatai-java/yt_logs --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+docker run -itd -p 8085:8080 --name yatai-log -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx4096m -Xms1024m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080'  -e 'SYSTEM_ENV=cloud' -v /mnt2:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/log/yt_logs:/yatai-java/yt_logs --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-log:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODM3NzUxMSwtMTE2OTUzNDk1LDgwNj
-cxNTM3LDIxMzkwOTEyMDYsLTE0MjYwNDc5NzMsMTI4NjY5NjAy
-MywtNjg2OTE0MTY0LDE0Mjk2MTg3MDMsLTE0NzAxNTEwMDQsMT
-MxODAyODY2NCwtMTc1Nzg3MDI3NSwxNTY0MTM1MjU3LDIwNDc1
-OTUwMDQsMTc1OTI1NDgxNiwxOTgyODk2MTI0LC0xODQxMDEzND
-kyLC0xOTQwNDM0MDM0LC02NTc1OTYxMDQsMjEwMDI2ODYzOCw3
-MjM5MTAyNzddfQ==
+eyJoaXN0b3J5IjpbMzg1NTMwMzU4LC0xMTY5NTM0OTUsODA2Nz
+E1MzcsMjEzOTA5MTIwNiwtMTQyNjA0Nzk3MywxMjg2Njk2MDIz
+LC02ODY5MTQxNjQsMTQyOTYxODcwMywtMTQ3MDE1MTAwNCwxMz
+E4MDI4NjY0LC0xNzU3ODcwMjc1LDE1NjQxMzUyNTcsMjA0NzU5
+NTAwNCwxNzU5MjU0ODE2LDE5ODI4OTYxMjQsLTE4NDEwMTM0OT
+IsLTE5NDA0MzQwMzQsLTY1NzU5NjEwNCwyMTAwMjY4NjM4LDcy
+MzkxMDI3N119
 -->
