@@ -102,13 +102,17 @@ docker run -itd --name tomcat  -p 8081:8080 --restart=always swr.cn-north-1.myhu
 docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx51200m -Xms10240m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/yt_logs:/yatai-java/yt_logs --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 景瑞:tomcat
 docker run -itd --name tomcat  -p 8081:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-school:latest
+
+武陵一小
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx21500m -Xms10240m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080' -e 'SERVER_IP=10.203.140.60'  -e 'SCHOOL_ID=1635149720361893888'  -e 'SYSTEM_ENV=school'  -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/yt_logs:/yatai-java/yt_logs --restart=always   swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzA1MTgwMzgsLTg5OTM5MTAwOCwxMD
-c0ODM2MjU3LC0xMTUwNDk0NzMzLC0zOTUxNTAyNDYsMzg1NTMw
-MzU4LC0xMTY5NTM0OTUsODA2NzE1MzcsMjEzOTA5MTIwNiwtMT
-QyNjA0Nzk3MywxMjg2Njk2MDIzLC02ODY5MTQxNjQsMTQyOTYx
-ODcwMywtMTQ3MDE1MTAwNCwxMzE4MDI4NjY0LC0xNzU3ODcwMj
-c1LDE1NjQxMzUyNTcsMjA0NzU5NTAwNCwxNzU5MjU0ODE2LDE5
-ODI4OTYxMjRdfQ==
+eyJoaXN0b3J5IjpbLTExNTg4NDkxMzIsLTIxMzA1MTgwMzgsLT
+g5OTM5MTAwOCwxMDc0ODM2MjU3LC0xMTUwNDk0NzMzLC0zOTUx
+NTAyNDYsMzg1NTMwMzU4LC0xMTY5NTM0OTUsODA2NzE1MzcsMj
+EzOTA5MTIwNiwtMTQyNjA0Nzk3MywxMjg2Njk2MDIzLC02ODY5
+MTQxNjQsMTQyOTYxODcwMywtMTQ3MDE1MTAwNCwxMzE4MDI4Nj
+Y0LC0xNzU3ODcwMjc1LDE1NjQxMzUyNTcsMjA0NzU5NTAwNCwx
+NzU5MjU0ODE2XX0=
 -->
