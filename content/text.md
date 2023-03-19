@@ -111,14 +111,20 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 
 ```
 web-sources
-docker run -itd --name tomcat  -p 8082:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
+docker run -itd --name web-resources  -p 8082:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
+
+
+location /resources {
+            alias /yatai-java/wwwroot/resources; 
+            index  index.html index.htm;   
+         }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDkwNDI4LC0xMTU5Mjk4NzE1LC0xMT
-U4ODQ5MTMyLC0yMTMwNTE4MDM4LC04OTkzOTEwMDgsMTA3NDgz
-NjI1NywtMTE1MDQ5NDczMywtMzk1MTUwMjQ2LDM4NTUzMDM1OC
-wtMTE2OTUzNDk1LDgwNjcxNTM3LDIxMzkwOTEyMDYsLTE0MjYw
-NDc5NzMsMTI4NjY5NjAyMywtNjg2OTE0MTY0LDE0Mjk2MTg3MD
-MsLTE0NzAxNTEwMDQsMTMxODAyODY2NCwtMTc1Nzg3MDI3NSwx
-NTY0MTM1MjU3XX0=
+eyJoaXN0b3J5IjpbODg3MzY3NjExLC03NzQ5MDQyOCwtMTE1OT
+I5ODcxNSwtMTE1ODg0OTEzMiwtMjEzMDUxODAzOCwtODk5Mzkx
+MDA4LDEwNzQ4MzYyNTcsLTExNTA0OTQ3MzMsLTM5NTE1MDI0Ni
+wzODU1MzAzNTgsLTExNjk1MzQ5NSw4MDY3MTUzNywyMTM5MDkx
+MjA2LC0xNDI2MDQ3OTczLDEyODY2OTYwMjMsLTY4NjkxNDE2NC
+wxNDI5NjE4NzAzLC0xNDcwMTUxMDA0LDEzMTgwMjg2NjQsLTE3
+NTc4NzAyNzVdfQ==
 -->
