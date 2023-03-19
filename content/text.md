@@ -111,14 +111,14 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 
 ```
 web-sources
-docker run -itd --name tomcat  -p 8081:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
+docker run -itd --name tomcat  -p 8082:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTkyOTg3MTUsLTExNTg4NDkxMzIsLT
-IxMzA1MTgwMzgsLTg5OTM5MTAwOCwxMDc0ODM2MjU3LC0xMTUw
-NDk0NzMzLC0zOTUxNTAyNDYsMzg1NTMwMzU4LC0xMTY5NTM0OT
-UsODA2NzE1MzcsMjEzOTA5MTIwNiwtMTQyNjA0Nzk3MywxMjg2
-Njk2MDIzLC02ODY5MTQxNjQsMTQyOTYxODcwMywtMTQ3MDE1MT
-AwNCwxMzE4MDI4NjY0LC0xNzU3ODcwMjc1LDE1NjQxMzUyNTcs
-MjA0NzU5NTAwNF19
+eyJoaXN0b3J5IjpbLTc3NDkwNDI4LC0xMTU5Mjk4NzE1LC0xMT
+U4ODQ5MTMyLC0yMTMwNTE4MDM4LC04OTkzOTEwMDgsMTA3NDgz
+NjI1NywtMTE1MDQ5NDczMywtMzk1MTUwMjQ2LDM4NTUzMDM1OC
+wtMTE2OTUzNDk1LDgwNjcxNTM3LDIxMzkwOTEyMDYsLTE0MjYw
+NDc5NzMsMTI4NjY5NjAyMywtNjg2OTE0MTY0LDE0Mjk2MTg3MD
+MsLTE0NzAxNTEwMDQsMTMxODAyODY2NCwtMTc1Nzg3MDI3NSwx
+NTY0MTM1MjU3XX0=
 -->
