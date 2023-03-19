@@ -112,6 +112,8 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 ```
 web-sources
 docker run -itd --name web-resources  -p 8082:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
+web-school
+docker run -itd --name web-school -p 8081:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-school:latest
 
 
 location /resources {
@@ -119,11 +121,11 @@ location /resources {
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODIxOTkxOSw4ODczNjc2MTEsLTc3ND
-kwNDI4LC0xMTU5Mjk4NzE1LC0xMTU4ODQ5MTMyLC0yMTMwNTE4
-MDM4LC04OTkzOTEwMDgsMTA3NDgzNjI1NywtMTE1MDQ5NDczMy
-wtMzk1MTUwMjQ2LDM4NTUzMDM1OCwtMTE2OTUzNDk1LDgwNjcx
-NTM3LDIxMzkwOTEyMDYsLTE0MjYwNDc5NzMsMTI4NjY5NjAyMy
-wtNjg2OTE0MTY0LDE0Mjk2MTg3MDMsLTE0NzAxNTEwMDQsMTMx
-ODAyODY2NF19
+eyJoaXN0b3J5IjpbLTE0MTY5NjY4MTQsMTEwODIxOTkxOSw4OD
+czNjc2MTEsLTc3NDkwNDI4LC0xMTU5Mjk4NzE1LC0xMTU4ODQ5
+MTMyLC0yMTMwNTE4MDM4LC04OTkzOTEwMDgsMTA3NDgzNjI1Ny
+wtMTE1MDQ5NDczMywtMzk1MTUwMjQ2LDM4NTUzMDM1OCwtMTE2
+OTUzNDk1LDgwNjcxNTM3LDIxMzkwOTEyMDYsLTE0MjYwNDc5Nz
+MsMTI4NjY5NjAyMywtNjg2OTE0MTY0LDE0Mjk2MTg3MDMsLTE0
+NzAxNTEwMDRdfQ==
 -->
