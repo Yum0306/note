@@ -121,15 +121,15 @@ docker run -itd --name web-school -p 8083:8080 --restart=always swr.cn-north-1.m
 location /resources {
             proxy_pass http://web-resources/web-resources;
             proxy_pass http://web-school/web-school;
-            proxy_pass http://web-admin/web-school;
+            proxy_pass http://web-admin/web-admin;
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzcxMzU3MiwxMTA4MjE5OTE5LDg4Nz
-M2NzYxMSwtNzc0OTA0MjgsLTExNTkyOTg3MTUsLTExNTg4NDkx
-MzIsLTIxMzA1MTgwMzgsLTg5OTM5MTAwOCwxMDc0ODM2MjU3LC
-0xMTUwNDk0NzMzLC0zOTUxNTAyNDYsMzg1NTMwMzU4LC0xMTY5
-NTM0OTUsODA2NzE1MzcsMjEzOTA5MTIwNiwtMTQyNjA0Nzk3My
-wxMjg2Njk2MDIzLC02ODY5MTQxNjQsMTQyOTYxODcwMywtMTQ3
-MDE1MTAwNF19
+eyJoaXN0b3J5IjpbNTM5MDA1MzgxLDExMDgyMTk5MTksODg3Mz
+Y3NjExLC03NzQ5MDQyOCwtMTE1OTI5ODcxNSwtMTE1ODg0OTEz
+MiwtMjEzMDUxODAzOCwtODk5MzkxMDA4LDEwNzQ4MzYyNTcsLT
+ExNTA0OTQ3MzMsLTM5NTE1MDI0NiwzODU1MzAzNTgsLTExNjk1
+MzQ5NSw4MDY3MTUzNywyMTM5MDkxMjA2LC0xNDI2MDQ3OTczLD
+EyODY2OTYwMjMsLTY4NjkxNDE2NCwxNDI5NjE4NzAzLC0xNDcw
+MTUxMDA0XX0=
 -->
