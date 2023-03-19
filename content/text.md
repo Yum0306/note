@@ -115,16 +115,15 @@ docker run -itd --name web-resources  -p 8082:8080 --restart=always swr.cn-north
 
 
 location /resources {
-            alias /yatai-java/wwwroot/resources; 
-            index  index.html index.htm;   
+            proxy_pass http://web-resources/web-resources;
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3MzY3NjExLC03NzQ5MDQyOCwtMTE1OT
-I5ODcxNSwtMTE1ODg0OTEzMiwtMjEzMDUxODAzOCwtODk5Mzkx
-MDA4LDEwNzQ4MzYyNTcsLTExNTA0OTQ3MzMsLTM5NTE1MDI0Ni
-wzODU1MzAzNTgsLTExNjk1MzQ5NSw4MDY3MTUzNywyMTM5MDkx
-MjA2LC0xNDI2MDQ3OTczLDEyODY2OTYwMjMsLTY4NjkxNDE2NC
-wxNDI5NjE4NzAzLC0xNDcwMTUxMDA0LDEzMTgwMjg2NjQsLTE3
-NTc4NzAyNzVdfQ==
+eyJoaXN0b3J5IjpbMTEwODIxOTkxOSw4ODczNjc2MTEsLTc3ND
+kwNDI4LC0xMTU5Mjk4NzE1LC0xMTU4ODQ5MTMyLC0yMTMwNTE4
+MDM4LC04OTkzOTEwMDgsMTA3NDgzNjI1NywtMTE1MDQ5NDczMy
+wtMzk1MTUwMjQ2LDM4NTUzMDM1OCwtMTE2OTUzNDk1LDgwNjcx
+NTM3LDIxMzkwOTEyMDYsLTE0MjYwNDc5NzMsMTI4NjY5NjAyMy
+wtNjg2OTE0MTY0LDE0Mjk2MTg3MDMsLTE0NzAxNTEwMDQsMTMx
+ODAyODY2NF19
 -->
