@@ -114,15 +114,18 @@ web-sources
 docker run -itd --name web-resources  -p 8082:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-resources:latest
 web-school
 docker run -itd --name web-school -p 8081:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-school:latest
+web-admin
+docker run -itd --name web-school -p 8083:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-admin:latest
 
 
 location /resources {
             proxy_pass http://web-resources/web-resources;
             proxy_pass http://web-school/web-school;
+            proxy_pass http://web-admin/web-school;
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTIwOTkwOCwxMTA4MjE5OTE5LDg4Nz
+eyJoaXN0b3J5IjpbMTUyNzcxMzU3MiwxMTA4MjE5OTE5LDg4Nz
 M2NzYxMSwtNzc0OTA0MjgsLTExNTkyOTg3MTUsLTExNTg4NDkx
 MzIsLTIxMzA1MTgwMzgsLTg5OTM5MTAwOCwxMDc0ODM2MjU3LC
 0xMTUwNDk0NzMzLC0zOTUxNTAyNDYsMzg1NTMwMzU4LC0xMTY5
