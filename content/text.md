@@ -117,7 +117,7 @@ docker run -itd --name web-school -p 8081:8080 --restart=always swr.cn-north-1.m
 web-admin
 docker run -itd --name web-school -p 8083:8080 --restart=always swr.cn-north-1.myhuaweicloud.com/ytwlrj/web-admin:latest
 java-admin
-docker run -itd -p 8070:8080 -v /mnt2:/mnt2 -v /yatai-java/data:/yatai-java/data -v /yatai-java/app/docker/yatai-school-admin/config:/config -v /yatai-java/yt_logs/admin:/yatai-java/yt_logs --restart=always --name yatai-school-admin 
+docker run -itd -p 8070:8080 -v /mnt2:/mnt2 -v /yatai-java/data:/yatai-java/data -v /yatai-java/app/docker/yatai-school-admin/config:/config -v /yatai-java/yt_logs/admin:/yatai-java/yt_logs --restart=always --name yatai-school-admin swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-admin:latest
 
 
 
@@ -128,7 +128,7 @@ location /resources {
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTI5MjYyMCwxMTA4MjE5OTE5LDg4Nz
+eyJoaXN0b3J5IjpbMTc5MDQzMjczOCwxMTA4MjE5OTE5LDg4Nz
 M2NzYxMSwtNzc0OTA0MjgsLTExNTkyOTg3MTUsLTExNTg4NDkx
 MzIsLTIxMzA1MTgwMzgsLTg5OTM5MTAwOCwxMDc0ODM2MjU3LC
 0xMTUwNDk0NzMzLC0zOTUxNTAyNDYsMzg1NTMwMzU4LC0xMTY5
