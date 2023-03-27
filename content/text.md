@@ -109,7 +109,13 @@ docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 
 北苑：
 docker run -itd -p 8080:8080 --name platform-temp  -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx21500m -Xms10240m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080' -e 'SERVER_IP=10.28.83.251'  -e 'SCHOOL_ID=1591955108298489856'  -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 
-```
+resapi: https://rc.ytwlrj.com/resource-api # 资源中心接口服务API -- 覆盖application.yml属性
+adminApi: https://v30.ytwlrj.com/admin-api # 企管服务
+logApi: https://rc.ytwlrj.com/log-api #日志服务中心
+yt-log:
+  mq:
+    log-exchange: exLogCollect
+    log-queue: queueLogSchool-${sync.mq.school-id}
 
 
 ```
@@ -131,7 +137,7 @@ location /resources {
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3Njk3MjcwOCwxNzkwNDMyNzM4LDExMD
+eyJoaXN0b3J5IjpbMTc0MTQ4MzUzNSwxNzkwNDMyNzM4LDExMD
 gyMTk5MTksODg3MzY3NjExLC03NzQ5MDQyOCwtMTE1OTI5ODcx
 NSwtMTE1ODg0OTEzMiwtMjEzMDUxODAzOCwtODk5MzkxMDA4LD
 EwNzQ4MzYyNTcsLTExNTA0OTQ3MzMsLTM5NTE1MDI0NiwzODU1
