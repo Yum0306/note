@@ -116,6 +116,9 @@ yt-log:
   mq:
     log-exchange: exLogCollect
     log-queue: queueLogSchool-${sync.mq.school-id}
+重庆办：    
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'SERVER_PORT=8080' -e 'START_ENV=school' -e 'SYSTEM_ENV=school' -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config --restart=always  swr.cn-north-1.myhuaweicloud.com/ytwlrj/platform-temp:1.2
+docker run -itd -p 8080:8080 --name platform -e 'SPRING_PROFILES_ACTIVE=pro' -e 'JAVA_OPTIONS=-Xmx21500m -Xms10240m -Duser.timezone=Asia/Shanghai' -e 'SERVER_PORT=8080' -e 'SERVER_IP=10.203.140.60'  -e 'SCHOOL_ID=1635149720361893888'  -e 'SYSTEM_ENV=school'  -v /home/mnt:/mnt -v /yatai-java/data:/yatai-java/data -v /yatai-java/config:/config -v /yatai-java/yt_logs:/yatai-java/yt_logs --restart=always   swr.cn-north-1.myhuaweicloud.com/ytwlrj/yatai-school-platform:latest
 
 
 ```
@@ -137,11 +140,11 @@ location /resources {
          }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MDI5MzIwNywxNzkwNDMyNzM4LDExMD
-gyMTk5MTksODg3MzY3NjExLC03NzQ5MDQyOCwtMTE1OTI5ODcx
-NSwtMTE1ODg0OTEzMiwtMjEzMDUxODAzOCwtODk5MzkxMDA4LD
-EwNzQ4MzYyNTcsLTExNTA0OTQ3MzMsLTM5NTE1MDI0NiwzODU1
-MzAzNTgsLTExNjk1MzQ5NSw4MDY3MTUzNywyMTM5MDkxMjA2LC
-0xNDI2MDQ3OTczLDEyODY2OTYwMjMsLTY4NjkxNDE2NCwxNDI5
-NjE4NzAzXX0=
+eyJoaXN0b3J5IjpbLTU4OTQ0MTA1NywtNjUwMjkzMjA3LDE3OT
+A0MzI3MzgsMTEwODIxOTkxOSw4ODczNjc2MTEsLTc3NDkwNDI4
+LC0xMTU5Mjk4NzE1LC0xMTU4ODQ5MTMyLC0yMTMwNTE4MDM4LC
+04OTkzOTEwMDgsMTA3NDgzNjI1NywtMTE1MDQ5NDczMywtMzk1
+MTUwMjQ2LDM4NTUzMDM1OCwtMTE2OTUzNDk1LDgwNjcxNTM3LD
+IxMzkwOTEyMDYsLTE0MjYwNDc5NzMsMTI4NjY5NjAyMywtNjg2
+OTE0MTY0XX0=
 -->
