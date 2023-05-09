@@ -25,7 +25,8 @@ ip addr show|grep -A1 'inet [^f:]'|sed -nr 's#^ +inet ([0-9.]+)/[0-9]+ brd [0-9.
 nmcli connection show
 11 如何查看容器使用了哪些进程号
 11.1 docker ps  --no-trunc 查看当前容器的长id
-22.2 /sys/fs/cgroup/memory/docker/容器完整id  qu
+11.2 cd /sys/fs/cgroup/memory/docker/容器完整id  去完整目录下
+11.3 cat  cgroup.procs
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -356,6 +357,6 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MTMzNjc2MSwtMjAxMzQ0MzA4OCwyMD
+eyJoaXN0b3J5IjpbMTAwNDk0NTQyNywtMjAxMzQ0MzA4OCwyMD
 M0ODAxMDcsLTQzMTkzOTA3Ml19
 -->
