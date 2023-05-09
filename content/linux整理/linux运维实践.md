@@ -1,4 +1,4 @@
-##常用命令
+## 常用命令
 ```
 1. df -h 查看磁盘占用
 2. find / -type f -size +800M  查找磁盘上占用超过800M的文件
@@ -23,7 +23,9 @@ du -sh ./* | sort -hr | head
 ip addr show|grep -A1 'inet [^f:]'|sed -nr 's#^ +inet ([0-9.]+)/[0-9]+ brd [0-9./]+ scope global .*#\1#p'
 10.查看网卡
 nmcli connection show
-
+11 如何查看容器使用了哪些进程号
+11.1 docker ps  --no-trunc 查看当前容器的长id
+22.2 /sys/fs/cgroup/memory/docker/容器完整id  qu
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -354,6 +356,6 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTM0NDMwODgsMjAzNDgwMTA3LC00Mz
-E5MzkwNzJdfQ==
+eyJoaXN0b3J5IjpbMjE0MTMzNjc2MSwtMjAxMzQ0MzA4OCwyMD
+M0ODAxMDcsLTQzMTkzOTA3Ml19
 -->
