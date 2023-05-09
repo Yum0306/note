@@ -27,6 +27,8 @@ nmcli connection show
 		11.1 docker ps  --no-trunc 查看当前容器的长id
 		11.2 cd /sys/fs/cgroup/memory/docker/容器完整id  去完整目录下
 		11.3 cat  cgroup.procs
+12 查看linuxfile占用
+lsof -n | awk '{print $2}' | sort | uniq -c | sort -nr | more
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -357,6 +359,6 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzk5ODU2MywtMjAxMzQ0MzA4OCwyMD
+eyJoaXN0b3J5IjpbMTYyNzc4ODI4MiwtMjAxMzQ0MzA4OCwyMD
 M0ODAxMDcsLTQzMTkzOTA3Ml19
 -->
