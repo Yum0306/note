@@ -54,9 +54,11 @@ port = 3306
 join_buffer_size = 128M
 sort_buffer_size = 16M
 read_rnd_buffer_size = 16M 
-sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+expire_logs_days=7
+max_binlog_size=500M
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1MjI0MjkzLDk1NjU5ODQzNSwtMjA4MT
-QxODI1MSwtODI2MjIyMDgwXX0=
+eyJoaXN0b3J5IjpbMTg1NjI2NTgyOCw5NTY1OTg0MzUsLTIwOD
+E0MTgyNTEsLTgyNjIyMjA4MF19
 -->
