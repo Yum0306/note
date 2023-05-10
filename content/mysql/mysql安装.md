@@ -8,6 +8,7 @@ windows下
 
 ## Mysql 忘记密码
 ```
+博客地址：https://blog.csdn.net/wangzhepaohui/article/details/109685612
 1.sc delete MySql80
 2.mysqld --install "MySql80" --defaults-file="C:\Program Files\MySQL\MySQL Server 8.0\my.ini"
 3.net start mysql80
@@ -59,6 +60,6 @@ expire_logs_days=7
 max_binlog_size=500M
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjI2NTgyOCw5NTY1OTg0MzUsLTIwOD
-E0MTgyNTEsLTgyNjIyMjA4MF19
+eyJoaXN0b3J5IjpbLTE3MDk5NjU5NzgsMTg1NjI2NTgyOCw5NT
+Y1OTg0MzUsLTIwODE0MTgyNTEsLTgyNjIyMjA4MF19
 -->
