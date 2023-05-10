@@ -5,7 +5,13 @@ windows下
 3.启动mysql数据库服务端程序，net start mysql56
 4.通过数据库客户端连接数据库服务端 mysql -u root -h 127.0.0.1
 ```
+
+## Mysql 忘记密码
+```
+1.sc delete MySql80
+2.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2NTk4NDM1LC0yMDgxNDE4MjUxLC04Mj
-YyMjIwODBdfQ==
+eyJoaXN0b3J5IjpbLTEzNzIzMzA2MTYsOTU2NTk4NDM1LC0yMD
+gxNDE4MjUxLC04MjYyMjIwODBdfQ==
 -->
