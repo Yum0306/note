@@ -7,8 +7,8 @@
 find /var/lib/docker/containers/ -type f -size +10M -name "*-json.log" -exec truncate -s 0 {} \;
 5.对指定相同后缀名的文件进行批量修改
 find ./ -name "*.png" | awk -F "-min.png" '{print $1}' | xargs -i -t mv ./{}-min.png ./{}.png
-6. uname -r 查看linux 的内核版本
-7. 添加用户组并添加当前用户到该用户组
+4. uname -r 查看linux 的内核版本
+5. 添加用户组并添加当前用户到该用户组
 sudo groupadd 用户组
 sudo gpasswd -a username  用户组
 8.清除内存中buff/cache占用 需要在root环境下执行
@@ -29,6 +29,8 @@ nmcli connection show
 		11.3 cat  cgroup.procs
 12 查看linuxfile占用
 lsof -n | awk '{print $2}' | sort | uniq -c | sort -nr | more
+6. wget -i {} -P {}  -c --no-check-certificate --random-wait -r -N -nH -t 5 -T 60 -w 10 -q
+批量下载文件到指定目录
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -359,6 +361,6 @@ package-cleanup --oldkernels
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzc4ODI4MiwtMjAxMzQ0MzA4OCwyMD
-M0ODAxMDcsLTQzMTkzOTA3Ml19
+eyJoaXN0b3J5IjpbLTE2MTA4MjgyMDcsMTYyNzc4ODI4MiwtMj
+AxMzQ0MzA4OCwyMDM0ODAxMDcsLTQzMTkzOTA3Ml19
 -->
