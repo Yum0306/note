@@ -84,31 +84,6 @@ Print当前的yay配置。
 ##### [](https://zhul.in/2021/04/04/yay-more/#s-stats "-s(--stats)")`-s(--stats)`[](https://zhul.in/2021/04/04/yay-more/#s-stats)
 
 会展示一大堆信息，如下
-
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-18  
-19  
-20  
-21  
-22  
-23  
-
 ```
 [zhullyb@Archlinux ~]$ yay -Ps==> Yay version v10.2.0							    #yay版本=============================================> Total installed packages: 1240				    #总共安装了多少包==> Total foreign installed packages: 24		    #多少包不是从源里安装的==> Explicitly installed packages: 271			    #有多少包是你自己主动安装的(而不是作为依赖安装的)==> Total Size occupied by packages: 14.3 GiB	    #安装的所有包合在一起一共占了你多少空间=============================================> Ten biggest packages:						    #十个体积最大的包wps-office-cn: 990.9 MiBttf-sarasa-gothic: 855.5 MiBlinux-firmware: 652.3 MiBbaidunetdisk-bin: 494.7 MiBcom.antutu.benchmark: 412.0 MiBwine: 402.2 MiBlinux-xanmod-cacule-uksm-cjktty: 324.4 MiBmicrosoft-edge-dev-bin: 316.4 MiBwine-mono: 316.2 MiBdeepin-wine5-i386: 259.5 MiB===========================================:: Querying AUR... -> Missing AUR Packages:  zhullyb-archlinux-git    #AUR里找不到的包 -> Flagged Out Of Date AUR Packages:  xml2		    #AUR中被人标注过期的包
 ```
@@ -499,5 +474,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMjM2ODE0MV19
+eyJoaXN0b3J5IjpbMTI0ODkxMjA3NSwxMDAyMzY4MTQxXX0=
 -->
