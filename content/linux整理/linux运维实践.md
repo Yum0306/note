@@ -29,8 +29,6 @@ nmcli connection show
 		11.3 cat  cgroup.procs
 12 查看linuxfile占用
 lsof -n | awk '{print $2}' | sort | uniq -c | sort -nr | more
-6. wget -i {} -P {}  -c --no-check-certificate --random-wait -r -N -nH -t 5 -T 60 -w 10 -q
-批量下载文件到指定目录
 ```
 
 ## 创建定时任务 定时备份docker 容器里面的mysql
@@ -360,7 +358,28 @@ $ yum install yum-utils
 package-cleanup --oldkernels  
 ```
 
+## 批量下载文件到指定目录
+命令:
+```
+wget -i {} -P {}  -c --no-check-certificate --random-wait -r -N -nH -t 5 -T 60 -w 10 -q
+```
+解释:
+```
+-i      --input file=在本地或外部file中找到的file下载URL
+-P     --directory prefix=prefix将文件保存到prefix/  目录
+-c      --继续获取部分下载的文件
+-r      --递归指定递归下载
+-N     --时间戳不会重新检索文件，除非比本地文件更新
+-nH   --无主机目录不会创建主机目录
+-t      --trys=NUMBER将重试次数设置为NUMBER（0个未限制）
+-T     --timeout=SECONDS将所有超时值设置为SECONDS
+-w    --wait=秒在两次检索之间等待秒
+-q     --quiet quiet（无输出）
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTA4MjgyMDcsMTYyNzc4ODI4MiwtMj
-AxMzQ0MzA4OCwyMDM0ODAxMDcsLTQzMTkzOTA3Ml19
+eyJoaXN0b3J5IjpbMTM5MDA4NDM5MywtMTYxMDgyODIwNywxNj
+I3Nzg4MjgyLC0yMDEzNDQzMDg4LDIwMzQ4MDEwNywtNDMxOTM5
+MDcyXX0=
 -->
