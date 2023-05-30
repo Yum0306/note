@@ -26,7 +26,7 @@ drwxr-xr-x. 14 501 games 4096 May 29 13:59 zlib-1.2.11
 
 cd gcc && rpm -ivh *.rpm --nodeps --force
 yum install gcc-c++ -y
-yum install perl -y (这两个涉及的组建比较多,用yum安装比较省心,源码安装需要先安装很多组件)
+yum install perl -y (这两个涉及的组件比较多,用yum安装比较省心,源码安装需要先安装很多组件)
 
 3.1 pcre安装：
 
@@ -133,6 +133,6 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDE1MTE0NTYsLTM1OTMxMjcwMSwxOT
-MwMzEyNDYxXX0=
+eyJoaXN0b3J5IjpbMTYyMDQ5ODY1MiwtMTQwMTUxMTQ1NiwtMz
+U5MzEyNzAxLDE5MzAzMTI0NjFdfQ==
 -->
