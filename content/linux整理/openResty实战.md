@@ -22,37 +22,34 @@ drwxr-xr-x. 14 501 games 4096 May 29 13:59 zlib-1.2.11
 -rw-r--r--. 1 root root 607698 Mar 22 2021 zlib-1.2.11.tar.gz
 
 3.分别安装
-安装gcc相关
+安装gcc相关：
 cd gcc && rpm -ivh *.rpm --nodeps --force
 yum install gcc-c++ -y
 yum install perl -y (这两个涉及的组建比较多,用yum安装比较省心,源码安装需要先安装很多组件)
-pcre安装
-执行如下命令：
+pcre安装：
 tar -zxvf pcre-8.44.tar.gz
 cd pcre-8.44/
 ./configure
 make && make install
-zlib安装
+zlib安装：
 tar -zxvf zlib-1.2.11.tar.gz
 cd zlib-1.2.11/
 ./configure
 make && make install
-openssl安装
-执行如下命令：
+openssl安装：
 tar -zxvf openssl-1.1.1g.tar.gz
 cd openssl-1.1.1g/
 ./config
 make && make install
-
-
+4.安装OpenResty
 ./configure \
---prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=/yatai-java/nginx/pcre-8.  
-44 --with-zlib=/yatai-java/nginx/zlib-1.2.11 --with-openssl=/yatai-java/nginx/openssl-1.1.1g --with-threads --with-http_ssl_module --with  
+--prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=../pcre-8.  
+44 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.1g --with-threads --with-http_ssl_module --with  
 -http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="LiveOps build at `date +  
 %Y-%m-%d`" --with-ld-opt="-Ijemalloc"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzI0MDk4NSwyMDUwMjUxMTMwLDIwNz
-E3NzIwNl19
+eyJoaXN0b3J5IjpbLTEzNjExMTE4ODMsMjA1MDI1MTEzMCwyMD
+cxNzcyMDZdfQ==
 -->
