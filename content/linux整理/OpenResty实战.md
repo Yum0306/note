@@ -23,22 +23,31 @@ drwxr-xr-x. 14 501 games 4096 May 29 13:59 zlib-1.2.11
 
 3.分别安装
 安装gcc相关：
+
 cd gcc && rpm -ivh *.rpm --nodeps --force
 yum install gcc-c++ -y
 yum install perl -y (这两个涉及的组建比较多,用yum安装比较省心,源码安装需要先安装很多组件)
-pcre安装：
+
+3.1 pcre安装：
+
 cd pcre-8.44/
 ./configure
 make && make install
-zlib安装：
+
+3.2 zlib安装：
+
 cd zlib-1.2.11/
 ./configure
 make && make install
-openssl安装：
+
+3.3 openssl安装：
+
 cd openssl-1.1.1g/
 ./config
 make && make install
-4.安装OpenResty
+
+3.4 安装OpenResty
+
 cd openresty-1.17.8.2
 ./configure \
 --prefix=/usr/local/openresty \
@@ -56,6 +65,7 @@ cd openresty-1.17.8.2
 --build="build at `date + %Y-%m-%d`" \
 --with-ld-opt="-Ijemalloc"
 gmake && gmake install
+
 ```
 ## 3 编辑nginx.conf配置文件
 ```
@@ -123,5 +133,5 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMDMxMjQ2MV19
+eyJoaXN0b3J5IjpbLTM1OTMxMjcwMSwxOTMwMzEyNDYxXX0=
 -->
