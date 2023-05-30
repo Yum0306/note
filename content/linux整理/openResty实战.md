@@ -27,29 +27,29 @@ cd gcc && rpm -ivh *.rpm --nodeps --force
 yum install gcc-c++ -y
 yum install perl -y (这两个涉及的组建比较多,用yum安装比较省心,源码安装需要先安装很多组件)
 pcre安装：
-tar -zxvf pcre-8.44.tar.gz
 cd pcre-8.44/
 ./configure
 make && make install
 zlib安装：
-tar -zxvf zlib-1.2.11.tar.gz
 cd zlib-1.2.11/
 ./configure
 make && make install
 openssl安装：
-tar -zxvf openssl-1.1.1g.tar.gz
 cd openssl-1.1.1g/
 ./config
 make && make install
 4.安装OpenResty
+cd openresty-1.17.8.2
 ./configure \
 --prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=../pcre-8.  
 44 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.1g --with-threads --with-http_ssl_module --with  
--http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="LiveOps build at `date +  
+-http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="build at `date +  
 %Y-%m-%d`" --with-ld-opt="-Ijemalloc"
+gmake && gmake install
 ```
+## 3添加lua脚本
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjExMTE4ODMsMjA1MDI1MTEzMCwyMD
-cxNzcyMDZdfQ==
+eyJoaXN0b3J5IjpbNDYzMTU1NTEzLDIwNTAyNTExMzAsMjA3MT
+c3MjA2XX0=
 -->
