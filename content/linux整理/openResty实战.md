@@ -71,8 +71,49 @@ server {
 }
 ```
 
-4
+## 4.在conf目录下添加token.lua脚本
+```
+local cjson = require("cjson")
+local uri_args = ngx.req.get_uri_args()  
+local uri2 = ngx.var.request_uri
+local timestamp = os.time() * 1000
+local old_token = uri_args["fa"]
+local err_token_msg = "token无效!"
+local exp_token_msg = "token已经过期!"
+if old_token == nil then
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
+    ngx.say(cjson.encode({code = 401,message = err_token_msg}))
+    ngx.exit(401)
+end
+local exp_time = tonumber(uri_args["exp"])
+if exp_time == nil then
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
+    ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
+    ngx.exit(401)
+end
+local index = string.find(uri2,"&fa")
+if index == nil then
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
+    ngx.say(cjson.encode({code = 401,message = err_token_msg}))
+    ngx.exit(401)
+end
+local path = string.sub(uri2,2,(index-1))
+local full_path = path .. "_" .."603E0E847391838FB5A12EFE6D6104A3"
+local new_sign = string.sub(ngx.md5(full_path),9,24)
+
+if old_token == nil or old_token ~= new_sign then
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
+    ngx.say(cjson.encode({code = 401,message = err_token_msg}))
+    ngx.exit(401)
+end
+
+if exp_time == nil or timestamp >= exp_time then
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
+    ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
+    ngx.exit(401)
+end
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MzE4MDA0NSwtOTgxMzg1MzUsMjA1MD
+eyJoaXN0b3J5IjpbLTYxNDMxOTIwNiwtOTgxMzg1MzUsMjA1MD
 I1MTEzMCwyMDcxNzcyMDZdfQ==
 -->
