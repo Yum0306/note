@@ -86,34 +86,33 @@ if old_token == nil then				 -- 未携带token返回401及token无效
     ngx.exit(401)
 end
 local exp_time = tonumber(uri_args["time"])  -- 获取参数中的过期时间参数
-if exp_time == nil then						 -- 时间错误或者
+if exp_time == nil then						 -- 时间错误返回401及token过期
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
     ngx.exit(401)
 end
-local index = string.find(uri2,"&fa")
-if index == nil then
+local index = string.find(uri2,"&token")     -- 定位token之前的位置
+if index == nil then						 -- 获取token失败也是返回401及token无效
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
 end
-local path = string.sub(uri2,2,(index-1))
+local path = string.sub(uri2,2,(index-1))    -- 获取token之前的位置
 local full_path = path .. "_" .."603E0E847391838FB5A12EFE6D6104A3"
 local new_sign = string.sub(ngx.md5(full_path),9,24)
-
-if old_token == nil or old_token ~= new_sign then
+if old_token ~= new_sign then
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
 end
 
-if exp_time == nil or timestamp >= exp_time then
+if timestamp >= exp_time then
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
     ngx.exit(401)
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODA0MTM3MjcsLTk4MTM4NTM1LDIwNT
-AyNTExMzAsMjA3MTc3MjA2XX0=
+eyJoaXN0b3J5IjpbNTU5MDkwNjkyLC05ODEzODUzNSwyMDUwMj
+UxMTMwLDIwNzE3NzIwNl19
 -->
