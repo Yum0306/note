@@ -98,9 +98,9 @@ if index == nil then						 -- 获取token失败也是返回401及token无效
     ngx.exit(401)
 end
 local path = string.sub(uri2,2,(index-1))    -- 获取token之前的位置
-local full_path = path .. "_" .."603E0E847391838FB5A12EFE6D6104A3"
-local new_sign = string.sub(ngx.md5(full_path),9,24)
-if old_token ~= new_sign then
+local full_path = path .. "_" .."盐值"		 -- 对获取的地址做md5处理,这个需要服务端返回地址就加上这个参数
+local new_sign = string.sub(ngx.md5(full_path),9,24)  -- 获取16位md5,减短整体url的长度
+if old_token ~= new_sign then				  -- 新计算的
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
@@ -113,6 +113,6 @@ if timestamp >= exp_time then
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5MDkwNjkyLC05ODEzODUzNSwyMDUwMj
-UxMTMwLDIwNzE3NzIwNl19
+eyJoaXN0b3J5IjpbLTE4NTY1NDQwODEsLTk4MTM4NTM1LDIwNT
+AyNTExMzAsMjA3MTc3MjA2XX0=
 -->
