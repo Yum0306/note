@@ -41,8 +41,15 @@ make && make install
 4.安装OpenResty
 cd openresty-1.17.8.2
 ./configure \
---prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=../pcre-8.  
-44 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.1g --with-threads --with-http_ssl_module --with  
+--prefix=/usr/local/openresty \
+--with-stream --with-luajit \
+--with-http_ssl_module \
+--with-pcre=../pcre-8.44 \
+--with-zlib=../zlib-1.2.11 \
+--with-openssl=../openssl-1.1.1g \
+--with-threads \
+--with-http_ssl_module \
+--with  
 -http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="build at `date +  
 %Y-%m-%d`" --with-ld-opt="-Ijemalloc"
 gmake && gmake install
@@ -113,5 +120,5 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDkyMDgzOV19
+eyJoaXN0b3J5IjpbLTEwNTAzMjgxNzVdfQ==
 -->
