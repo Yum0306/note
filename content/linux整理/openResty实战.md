@@ -51,26 +51,26 @@ gmake && gmake install
 ```
 server {  
 		listen 8006;  
-		lua_code_cache off; 
+		lua_code_cache off; #这个设置只是为了开启热部署,你修改了lua脚本会动态加载,重启nginx的时候也会提示,这个会消耗性能,生产中关闭此配置
 		#server_name localhost;  
   
 		#charset koi8-r;  
 		  
 		#access_log logs/host.access.log main;  
 		location / {  
-				charset utf-8;  
+				charset utf-8;   #这个需要设置字符集,否则返回中文会乱码
 				default_type text/html;  
 				#content_by_lua_file conf/test.lua;  
 				access_by_lua_file conf/test.lua;  
 				add_header Access-Control-Allow-Crigin *;  
 				add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS;  
-				alias /home/mnt/yatai-java/data/upload/school/;  
+				alias /home/mnt/service/;  
 				allow all;  
 				autoindex on;  
 		}
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMDM4NjQ4MiwyMDUwMjUxMTMwLDIwNz
-E3NzIwNl19
+eyJoaXN0b3J5IjpbLTk4MTM4NTM1LDIwNTAyNTExMzAsMjA3MT
+c3MjA2XX0=
 -->
