@@ -6,10 +6,12 @@
 ## 2.源码安装Openresty,为了固定版本,多服务下部署下减少版本之间不兼容
 
 ```
-1.版本: Openresty1.17.8.2、openssl-1.1.1g、pcre-8.44、zlib-1.2.11
+1.版本: Openresty1.17.8.2、openssl-1.1.1g、pcre-8.44、zlib-1.2.11、gcc相关组件
 2.解压后目录
 [root@localhost nginx]# ls -l  
-total 17156  
+total 43804  
+drwxr-xr-x. 2 root root 4096 Mar 22 2021 gcc  
+-rw-r--r--. 1 root root 27283113 May 30 09:11 gcc.zip  
 drwxrwxr-x. 5 admin admin 130 Jul 14 2020 openresty-1.17.8.2  
 -rw-r--r--. 1 root root 5041142 May 30 09:08 openresty-1.17.8.2.tar.gz  
 drwxrwxr-x. 19 root root 4096 May 29 13:58 openssl-1.1.1g  
@@ -18,6 +20,7 @@ drwxr-xr-x. 9 1169 1169 8192 May 29 13:59 pcre-8.44
 -rw-r--r--. 1 root root 2090750 Mar 22 2021 pcre-8.44.tar.gz  
 drwxr-xr-x. 14 501 games 4096 May 29 13:59 zlib-1.2.11  
 -rw-r--r--. 1 root root 607698 Mar 22 2021 zlib-1.2.11.tar.gz
+
 3.分别安装
 unzip gcc.zip
 cd gcc && rpm -ivh *.rpm --nodeps --force
@@ -53,6 +56,6 @@ make && make install
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NjMzODEzMiwyMDUwMjUxMTMwLDIwNz
+eyJoaXN0b3J5IjpbLTY2MzYzMjI0MiwyMDUwMjUxMTMwLDIwNz
 E3NzIwNl19
 -->
