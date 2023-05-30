@@ -1,4 +1,4 @@
-# OpenResty实战教程
+# OpenResty实战教程,对文件访问地址进行验证,如果为携带token,或者时间已经过期,
 ## 1.解释一下,啥是OpenResty?
 ```
 刚开始,我以为OpenResty是Nginx的一个模块,后面才了解到,他其实是nginx的一个非官方发行版,是由国内的章亦春大佬编写的,OpenResty其实就是nginx,只是内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。
@@ -60,8 +60,8 @@ server {
 		location / {  
 				charset utf-8;   #这个需要设置字符集,否则返回中文会乱码
 				default_type text/html;  
-				#content_by_lua_file conf/test.lua;  
-				access_by_lua_file conf/test.lua;  
+				#content_by_lua_file conf/test.lua;  #是内容处理器，接受请求并输出响应，适用于location、location if。
+				access_by_lua_file conf/token.lua;  #在请求访问阶段处理，用于访问控制，适用于http、server、location、location if。
 				add_header Access-Control-Allow-Crigin *;  
 				add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS;  
 				alias /home/mnt/service/;  
@@ -70,7 +70,9 @@ server {
 		}
 }
 ```
+
+4
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MTM4NTM1LDIwNTAyNTExMzAsMjA3MT
-c3MjA2XX0=
+eyJoaXN0b3J5IjpbNTU0MDE2MzQ4LC05ODEzODUzNSwyMDUwMj
+UxMTMwLDIwNzE3NzIwNl19
 -->
