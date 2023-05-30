@@ -47,9 +47,30 @@ cd openresty-1.17.8.2
 %Y-%m-%d`" --with-ld-opt="-Ijemalloc"
 gmake && gmake install
 ```
-## 3添加lua脚本
-
+## 3 编辑nginx.conf配置文件
+```
+server {  
+		listen 8006;  
+		lua_code_cache off; 
+		#server_name localhost;  
+  
+		#charset koi8-r;  
+		  
+		#access_log logs/host.access.log main;  
+		location / {  
+				charset utf-8;  
+				default_type text/html;  
+				#content_by_lua_file conf/test.lua;  
+				access_by_lua_file conf/test.lua;  
+				add_header Access-Control-Allow-Crigin *;  
+				add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS;  
+				alias /home/mnt/yatai-java/data/upload/school/;  
+				allow all;  
+				autoindex on;  
+		}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzMTU1NTEzLDIwNTAyNTExMzAsMjA3MT
-c3MjA2XX0=
+eyJoaXN0b3J5IjpbMTAyMDM4NjQ4MiwyMDUwMjUxMTMwLDIwNz
+E3NzIwNl19
 -->
