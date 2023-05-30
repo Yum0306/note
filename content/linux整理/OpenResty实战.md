@@ -49,9 +49,12 @@ cd openresty-1.17.8.2
 --with-openssl=../openssl-1.1.1g \
 --with-threads \
 --with-http_ssl_module \
---with  
--http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="build at `date +  
-%Y-%m-%d`" --with-ld-opt="-Ijemalloc"
+--with-http_v2_module \
+--with-http_realip_module \
+--with-http_gzip_static_module \
+--with-http_stub_status_module \
+--build="build at `date + %Y-%m-%d`" \
+--with-ld-opt="-Ijemalloc"
 gmake && gmake install
 ```
 ## 3 编辑nginx.conf配置文件
@@ -120,5 +123,5 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTAzMjgxNzVdfQ==
+eyJoaXN0b3J5IjpbMTkzMDMxMjQ2MV19
 -->
