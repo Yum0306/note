@@ -81,8 +81,8 @@ local old_token = uri_args["token"]		 -- 获取参数中的token
 local err_token_msg = "token无效!"		 -- token无效提示
 local exp_token_msg = "token已经过期!"    -- token过期提示
 if old_token == nil then				 -- 未携带token返回401及token无效
-    ngx.header['Content-Type'] = 'application/json; charset=utf-8'
-    ngx.say(cjson.encode({code = 401,message = err_token_msg}))
+    ngx.header['Content-Type'] = 'application/json; charset=utf-8'  -- 设置响应格式
+    ngx.say(cjson.encode({code = 401,message = err_token_msg}))   -- 设置
     ngx.exit(401)
 end
 local exp_time = tonumber(uri_args["time"])  -- 获取参数中的过期时间参数
@@ -113,6 +113,6 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMzI5MTUzOSwtOTgxMzg1MzUsMjA1MD
+eyJoaXN0b3J5IjpbMTkxNjc5MTQ5OSwtOTgxMzg1MzUsMjA1MD
 I1MTEzMCwyMDcxNzcyMDZdfQ==
 -->
