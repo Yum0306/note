@@ -22,12 +22,10 @@ drwxr-xr-x. 14 501 games 4096 May 29 13:59 zlib-1.2.11
 -rw-r--r--. 1 root root 607698 Mar 22 2021 zlib-1.2.11.tar.gz
 
 3.分别安装
-unzip gcc.zip
+安装gcc相关
 cd gcc && rpm -ivh *.rpm --nodeps --force
 yum install gcc-c++ -y
-yum install perl -y
-进入nginx目录
-unzip nginx.zip
+yum install perl -y (这两个涉及的组建比较多,用yum安装比较省心,源码安装需要先安装很多组件)
 pcre安装
 执行如下命令：
 tar -zxvf pcre-8.44.tar.gz
@@ -35,7 +33,6 @@ cd pcre-8.44/
 ./configure
 make && make install
 zlib安装
-执行如下命令：
 tar -zxvf zlib-1.2.11.tar.gz
 cd zlib-1.2.11/
 ./configure
@@ -56,6 +53,6 @@ make && make install
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MzYzMjI0MiwyMDUwMjUxMTMwLDIwNz
+eyJoaXN0b3J5IjpbLTkxMzI0MDk4NSwyMDUwMjUxMTMwLDIwNz
 E3NzIwNl19
 -->
