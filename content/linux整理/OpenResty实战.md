@@ -100,19 +100,19 @@ local timestamp = os.time() * 1000		 -- 获取时间戳
 local old_token = uri_args["token"]		 -- 获取参数中的token
 local err_token_msg = "token无效!"		 -- token无效提示
 local exp_token_msg = "token已经过期!"    -- token过期提示
-if old_token == nil then				 -- 未携带token返回401及token无效
+if old_token == nil then				 -- 未携带token返回401并提示token无效
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'  -- 设置响应格式
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))   -- 设置返回内容
     ngx.exit(401)												  -- 设置返回状态码(不过这个好像没生效,每次都是200)
 end
 local exp_time = tonumber(uri_args["time"])  -- 获取参数中的过期时间参数
-if exp_time == nil then						 -- 时间错误返回401及token过期
+if exp_time == nil then						 -- 时间错误返回401并提示token过期
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
     ngx.exit(401)
 end
 local index = string.find(uri2,"&token")     -- 定位token之前的位置
-if index == nil then						 -- 获取token失败也是返回401及token无效
+if index == nil then						 -- 获取token失败也是返回401并提示token无效
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
@@ -120,19 +120,19 @@ end
 local path = string.sub(uri2,2,(index-1))    -- 获取token之前的位置
 local full_path = path .."盐值"		 -- 对获取的地址做md5处理,这个需要服务端返回地址就加上这个参数
 local new_sign = string.sub(ngx.md5(full_path),9,24)  -- 获取16位md5,减短整体url的长度
-if old_token ~= new_sign then				  -- 新计算的摘要签名和参数上携带的不一致,直接返回401及token无效
+if old_token ~= new_sign then				  -- 新计算的摘要签名和参数上携带的不一致,直接返回401并提示token无效
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
 end
 
-if timestamp >= exp_time then                  -- 当前时间大于过期时间返回401及token过期(这里取的当前时间不是精准的,没找到获取毫秒的方法,就使用的秒*1000,反正误差也就在1秒左右,问题不大)
+if timestamp >= exp_time then                  -- 当前时间大于过期时间返回401并提示token过期(这里取的当前时间不是精准的,没找到获取毫秒的方法,就使用的秒*1000,反正误差也就在1秒左右,问题不大)
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
     ngx.exit(401)
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIyMTI5MzAyLC0xNDAxNTExNDU2LC0zNT
-kzMTI3MDEsMTkzMDMxMjQ2MV19
+eyJoaXN0b3J5IjpbLTMwMjkzMjk0OCwtMTQwMTUxMTQ1NiwtMz
+U5MzEyNzAxLDE5MzAzMTI0NjFdfQ==
 -->
