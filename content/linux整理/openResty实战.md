@@ -73,13 +73,13 @@ server {
 
 ## 4.在conf目录下添加token.lua脚本
 ```
-local cjson = require("cjson")
-local uri_args = ngx.req.get_uri_args()  
-local uri2 = ngx.var.request_uri
-local timestamp = os.time() * 1000
-local old_token = uri_args["fa"]
-local err_token_msg = "token无效!"
-local exp_token_msg = "token已经过期!"
+local cjson = require("cjson")			 -- 引入json模块
+local uri_args = ngx.req.get_uri_args()  -- 获取请求参数
+local uri2 = ngx.var.request_uri		 -- 获取完整请求地址
+local timestamp = os.time() * 1000		 -- 获取时间戳
+local old_token = uri_args["token"]		 -- 获取参数中的token
+local err_token_msg = "token无效!"		 -- token无效提示
+local exp_token_msg = "token已经过期!"    -- token
 if old_token == nil then
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
@@ -114,6 +114,6 @@ if exp_time == nil or timestamp >= exp_time then
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDMxOTIwNiwtOTgxMzg1MzUsMjA1MD
-I1MTEzMCwyMDcxNzcyMDZdfQ==
+eyJoaXN0b3J5IjpbLTE3MzkwNDUyNjcsLTk4MTM4NTM1LDIwNT
+AyNTExMzAsMjA3MTc3MjA2XX0=
 -->
