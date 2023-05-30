@@ -6,7 +6,8 @@
 ## 2.源码安装Openresty,为了固定版本,多服务下部署下减少版本之间不兼容
 
 ```
-版本: Openresty1.17.8.2、openssl-1.1.1g、pcre-8.44、zlib-1.2.11
+1.版本: Openresty1.17.8.2、openssl-1.1.1g、pcre-8.44、zlib-1.2.11
+2.解压后目录
 
 ./configure \
 --prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=/yatai-java/nginx/pcre-8.  
@@ -16,6 +17,6 @@
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjg5MzUwNjYsMjA1MDI1MTEzMCwyMD
-cxNzcyMDZdfQ==
+eyJoaXN0b3J5IjpbMjA2NTAxNzI3NiwyMDUwMjUxMTMwLDIwNz
+E3NzIwNl19
 -->
