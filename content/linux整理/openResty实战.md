@@ -5,6 +5,14 @@
 ```
 ## 2.源码安装Openresty,为了固定版本,多服务下部署下减少版本之间不兼容
 
+```
+./configure \
+--prefix=/usr/local/openresty --with-stream --with-luajit --with-http_ssl_module --with-pcre=/yatai-java/nginx/pcre-8.  
+44 --with-zlib=/yatai-java/nginx/zlib-1.2.11 --with-openssl=/yatai-java/nginx/openssl-1.1.1g --with-threads --with-http_ssl_module --with  
+-http_v2_module --with-http_realip_module --with-http_gzip_static_module --with-http_stub_status_module --build="LiveOps build at `date +  
+%Y-%m-%d`" --with-ld-opt="-Ijemalloc"
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MTc3MjA2XX0=
+eyJoaXN0b3J5IjpbMjA1MDI1MTEzMCwyMDcxNzcyMDZdfQ==
 -->
