@@ -79,14 +79,14 @@ local uri2 = ngx.var.request_uri		 -- 获取完整请求地址
 local timestamp = os.time() * 1000		 -- 获取时间戳
 local old_token = uri_args["token"]		 -- 获取参数中的token
 local err_token_msg = "token无效!"		 -- token无效提示
-local exp_token_msg = "token已经过期!"    -- token
-if old_token == nil then
+local exp_token_msg = "token已经过期!"    -- token过期提示
+if old_token == nil then				 -- 未携带token返回401及token无效
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = err_token_msg}))
     ngx.exit(401)
 end
-local exp_time = tonumber(uri_args["exp"])
-if exp_time == nil then
+local exp_time = tonumber(uri_args["time"])  -- 获取参数中的过期时间参数
+if exp_time == nil then						 -- 时间错误或者
     ngx.header['Content-Type'] = 'application/json; charset=utf-8'
     ngx.say(cjson.encode({code = 401,message = exp_token_msg}))
     ngx.exit(401)
@@ -114,6 +114,6 @@ if exp_time == nil or timestamp >= exp_time then
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzkwNDUyNjcsLTk4MTM4NTM1LDIwNT
+eyJoaXN0b3J5IjpbLTEyODA0MTM3MjcsLTk4MTM4NTM1LDIwNT
 AyNTExMzAsMjA3MTc3MjA2XX0=
 -->
