@@ -4,7 +4,12 @@
 刚开始,我以为OpenResty是Nginx的一个模块,后面才了解到,他其实是nginx的一个非官方发行版,是由国内的章亦春大佬编写的,OpenResty其实就是nginx,只是内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。
 ```
 ## 2.源码安装Openresty,为了固定版本,多服务下部署下减少版本之间不兼容
-
+### 1.文件下载地址
+```
+链接：https://pan.baidu.com/s/1hERRGjZ0BEvNVH0vm7gaKQ 
+提取码：mqsu 
+```
+### 2.安装
 ```
 1.版本: Openresty1.17.8.2、openssl-1.1.1g、pcre-8.44、zlib-1.2.11、gcc相关组件
 2.解压后目录
@@ -133,6 +138,6 @@ if timestamp >= exp_time then                  -- 当前时间大于过期时间
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjkzMjk0OCwtMTQwMTUxMTQ1NiwtMz
-U5MzEyNzAxLDE5MzAzMTI0NjFdfQ==
+eyJoaXN0b3J5IjpbMTQ5Mjc2Mzc4NSwtMzAyOTMyOTQ4LC0xND
+AxNTExNDU2LC0zNTkzMTI3MDEsMTkzMDMxMjQ2MV19
 -->
