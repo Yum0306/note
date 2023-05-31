@@ -397,33 +397,33 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 不在后台循环调用sudo，可能会导致sudo授权在长时间构建期间超时。
 
-#### "batchinstall")batchinstall
+#### batchinstall
 
-#####  "--batchinstall")`--batchinstall`
+#####  `--batchinstall`
 
 在构建和安装AUR包时，对每个软件包的安装进行排序，而并非在构建之后立刻安装每个软件包时。 需要注意的是，一旦构建了所有软件包，或者需要构建队列中的软件包作为构建另一个软件包的依赖项，应当在安装队列中安装所有软件包。
 
-#####  "*--nobatchinstall")*`--nobatchinstall`
+#####  `--nobatchinstall`
 
 在构建AUR包成功后立即安装。
 
-#### "clearafter")clearafter
+#### clearafter
 
-#####  "--cleanafter")`--cleanafter`
+#####  `--cleanafter`
 
 在构建AUR包完成以后清除cache文件。
 
-#####  "*--nocleanafter")*`--nocleanafter`
+#####  `--nocleanafter`
 
 在构建AUR包完成以后不清除cache文件。
 
-###  "其他型")其他型
+###  其他型
 
-##### "--save")`--save`
+##### `--save`
 
 把你这一次执行yay后面跟的配置参数永久保存下来。
 
-##### "--aururl")`--aururl`
+##### `--aururl`
 
 更改aur源地址（默认为 [https://aur.archlinux.org]），适用于中国用户，可以使用此参数将AUR的地址设置成清华的反代，具体的配置命令为
 
@@ -437,29 +437,30 @@ TUNA 的反代已经取消，可以使用如下命令设置回 AUR 官方源
 yay --aururl "https://aur.archlinux.org" --save
 ```
 
-#####  "--sortby")`--sortby`
+#####  `--sortby`
 
 在搜索过程中，按特定条件对AUR结果进行排序，后跟`<votes|popularity|id|baseid|name|base|submitted|modified`参数，默认为`votes`。
 
-##### "--searchby")`--searchby`
+##### `--searchby`
 
 通过指定查询类型来搜索AUR软件包，后跟`<name|name-desc|maintainer|depends|checkdepends|makedepends|optdepends`参数，默认为`name-desc`。
 
-#####  "*--topdown")*`--topdown`
+#####  `--topdown`
 
 优先展示源内包，其次才是AUR包
 
-#####  "--bottomup")`--bottomup`
+#####  `--bottomup`
 
 优先展示AUR包，其次才是源内包
 
-##### "--requestsplitn <number>")`--requestsplitn <number>`
+##### `--requestsplitn <number>`
 
 设置在每次向AUR的请求的最大数值（默认150）。数值越高，请求时间越短，但是单次请求的数值过大会导致error。当这个数值＞500时你应当特别注意这一点。
 
-##### "--completioninterval <days>")`--completioninterval <days>`
+##### `--completioninterval <days>`
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMzQ0MDA3MiwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbNzIyMzI2NzIzLDIxMDM0NDAwNzIsMTAwMj
+M2ODE0MV19
 -->
