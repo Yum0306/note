@@ -310,39 +310,38 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 询问你是否从每个PKGBUILD的validpgpkeys字段导入未知的PGP密钥。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nopgpfetch "--nopgpfetch")`--nopgpfetch`[](https://zhul.in/2021/04/04/yay-more/#nopgpfetch)
+##### `--nopgpfetch`
 
 不自动导入陌生的PGP密钥。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#useask%E9%80%89%E9%A1%B9 "useask选项")useask选项[](https://zhul.in/2021/04/04/yay-more/#useask%E9%80%89%E9%A1%B9)
+#### useask选项
 
-##### [](https://zhul.in/2021/04/04/yay-more/#useask "*--useask")*`--useask`[](https://zhul.in/2021/04/04/yay-more/#useask)
+##### `--useask`
 
 调用pacman的–ask询问用户是否删除系统中与当前包冲突的软件包。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nouseask "--nouseask")`--nouseask`[](https://zhul.in/2021/04/04/yay-more/#nouseask)
+##### `--nouseask`
 
 不调用pacman的–ask询问用户是否删除系统中与当前包冲突的软件包，遇到冲突的软件包时直接报错，由用户来手动解决。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#combinedupgrade%E8%8F%9C%E5%8D%95 "combinedupgrade菜单")combinedupgrade菜单[](https://zhul.in/2021/04/04/yay-more/#combinedupgrade%E8%8F%9C%E5%8D%95)
+#### combinedupgrade菜单
 
-##### [](https://zhul.in/2021/04/04/yay-more/#combinedupgrade "--combinedupgrade")`--combinedupgrade`[](https://zhul.in/2021/04/04/yay-more/#combinedupgrade)
+##### `--combinedupgrade`
 
 在系统更新期间，将源内包和AUR包的更新菜单合并到一起。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nocombinedupgrade "*--nocombinedupgrade")*`--nocombinedupgrade`[](https://zhul.in/2021/04/04/yay-more/#nocombinedupgrade)
+#####  `--nocombinedupgrade`
 
 在系统更新期间，先支持源内包的升级，完成后再进行AUR包的升级。
 
-### [](https://zhul.in/2021/04/04/yay-more/#T-or-F-%E5%9E%8B "T or F 型")T or F 型[](https://zhul.in/2021/04/04/yay-more/#T-or-F-%E5%9E%8B)
+###  T or F 型
 
-#### [](https://zhul.in/2021/04/04/yay-more/#devel "devel")devel[](https://zhul.in/2021/04/04/yay-more/#devel)
-
-##### [](https://zhul.in/2021/04/04/yay-more/#devel-1 "--devel")`--devel`[](https://zhul.in/2021/04/04/yay-more/#devel-1)
+#### devel
+##### `--devel`
 
 在系统更新期间，检查AUR的vcs包是否有更新，当前仅支持AUR的-git包。 devel查询是使用`git ls-remote`对比安装时和现在最新的commit_id完成的。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nodevel "*--nodevel")*`--nodevel`[](https://zhul.in/2021/04/04/yay-more/#nodevel)
+##### `--nodevel`
 
 在系统更新期间， 不检查AUR的vcs包是否有更新。
 
@@ -462,5 +461,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTQ2MTY5NCwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbNzA1NjEwNDMzLDEwMDIzNjgxNDFdfQ==
 -->
