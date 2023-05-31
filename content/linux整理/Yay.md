@@ -116,55 +116,52 @@ Print指定包的PKGBUILD。
 ### pacman 拓展用法
 yay虽然可以使用pacman的所有<operation>，但是它远不仅于此。在这一段，我将向你介绍yay中包含的那些pacman不包括的pacman <operation
 
-#### [](https://zhul.in/2021/04/04/yay-more/#S "-S")`-S`[](https://zhul.in/2021/04/04/yay-more/#S)
+#### `-S`
 
-##### [](https://zhul.in/2021/04/04/yay-more/#S-Si-Sl-Ss-Su-Sc-Qu "-S, -Si, -Sl, -Ss, -Su, -Sc, -Qu")`-S, -Si, -Sl, -Ss, -Su, -Sc, -Qu`[](https://zhul.in/2021/04/04/yay-more/#S-Si-Sl-Ss-Su-Sc-Qu)
+##### `-S, -Si, -Sl, -Ss, -Su, -Sc, -Qu`
 
 这些操作pacman都支持，而与pacman不同的是，yay的这些操作可以涵盖到**官方源/第三方源和AUR**中的所有包。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#Sc "-Sc")`-Sc`[](https://zhul.in/2021/04/04/yay-more/#Sc)
+#### `-Sc`
 
 yay将会清除AUR包构建时的缓存和没有被track的文件。没有被track的文件在这里指AUR包构建时下载的sources或者构建完成的pkg包，但是vcs sources会被保留（比如.`git`文件夹）
 
-#### [](https://zhul.in/2021/04/04/yay-more/#%E5%85%A8%E5%B1%80%E7%9A%84-options "全局的[options]")全局的[options][](https://zhul.in/2021/04/04/yay-more/#%E5%85%A8%E5%B1%80%E7%9A%84-options)
-
+#### 全局的[options]
 全局是指在所有<operation>下都可以加啦。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#repo "--repo")`--repo`[](https://zhul.in/2021/04/04/yay-more/#repo)
+#####`--repo`
 
 假定你给出的包名只存在源里（忽视AUR的存在）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#a-aur "-a(--aur)")`-a(--aur)`[](https://zhul.in/2021/04/04/yay-more/#a-aur)
+##### `-a(--aur)`
 
 假定你给出的包名只存在AUR中（忽视源的存在）
 
-## [](https://zhul.in/2021/04/04/yay-more/#%E9%85%8D%E7%BD%AE%E8%AE%BE%E7%BD%AE "配置设置")配置设置[](https://zhul.in/2021/04/04/yay-more/#%E9%85%8D%E7%BD%AE%E8%AE%BE%E7%BD%AE)
+## 配置设置
 
 原版的man手册排的比较混乱，我这里自己细分了几个类型，或许不是特别专业，但我希望能够帮助你们理解。
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4%E5%9E%8B "自定义调用命令型")自定义调用命令型[](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4%E5%9E%8B)
+### 自定义调用命令型
 
-##### [](https://zhul.in/2021/04/04/yay-more/#editor-lt-command-gt "--editor <command>")`--editor <command>`[](https://zhul.in/2021/04/04/yay-more/#editor-lt-command-gt)
+##### `--editor <command>`
 
 设置编辑时调用的编辑器。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#makepkg-lt-command-gt "--makepkg <command>")`--makepkg <command>`[](https://zhul.in/2021/04/04/yay-more/#makepkg-lt-command-gt)
+#####`--makepkg <command>`
 
 设置makepkg时需要调用makepkg命令（一般情况下用不到）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#pacman-lt-command-gt "--pacman <command>")`--pacman <command>`[](https://zhul.in/2021/04/04/yay-more/#pacman-lt-command-gt)
+##### `--pacman <command>`
 
 设置运行pacman时需要调用pacman命令（一般情况下用不到）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#tar-lt-command-gt "--tar <command>")`--tar <command>`[](https://zhul.in/2021/04/04/yay-more/#tar-lt-command-gt)
-
+##### `--tar <command>`
 设置makepkg解压tar资源时调用的tar命令（一般情况下用不到）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#git-lt-command-gt "--git <command>")`--git <command>`[](https://zhul.in/2021/04/04/yay-more/#git-lt-command-gt)
-
+##### `--git <command>`
 设置makepkg clone git资源时调用的git命令（比如你可以安装AUR中的fgit-go，使用`--git fgit`参数来让fastgit代理clone的过程）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#gpg-lt-command-gt "--gpg <command>")`--gpg <command>`[](https://zhul.in/2021/04/04/yay-more/#gpg-lt-command-gt)
+##### `--gpg <command>`[](https://zhul.in/2021/04/04/yay-more/#gpg-lt-command-gt)
 
 设置gpg验证资源时调用的gpg命令
 
@@ -472,5 +469,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjY3NzQ4NTMsMTAwMjM2ODE0MV19
+eyJoaXN0b3J5IjpbLTEyNzg4MTMxNDQsMTAwMjM2ODE0MV19
 -->
