@@ -10,15 +10,15 @@
 
 **Tips2: 使用电脑端的访客可以在侧栏以获取目录。**
 
-## [](https://zhul.in/2021/04/04/yay-more/#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95 "基本用法")基本用法[]
+## "基本用法")基本用法[]
 
 yay的基本用法是`yay <operation> [options] [targets]`、`yay foo`和`yay`，`yay <operation> [options] [targets]`的用法可以讨论的点比较多，我会在后文中一一道来。
 
-### [](https://zhul.in/2021/04/04/yay-more/#yay "yay")`yay`[](https://zhul.in/2021/04/04/yay-more/#yay)
+### `yay`
 
 当我们仅执行`yay`，后面不跟任何参数时，yay会执行操作`yay -Syu`，他会先调用pacman更新源的数据库、更新所有从源内安装的软件包，并检查你的AUR包有没有更新。
 
-### [](https://zhul.in/2021/04/04/yay-more/#yay-foo "yay foo")`yay foo`[](https://zhul.in/2021/04/04/yay-more/#yay-foo)
+### `yay foo`
 
 通过yay后面直接跟包名的命令会让yay直接在源和AUR内搜索带有`foo`关键词的包（包名和简介中只要出现foo都会被一网打尽），以下是我执行`yay dingtalk`的输出
 
@@ -39,25 +39,25 @@ May be the official Linux experimental version
 
 输入每一项对应的序号即可进入相应的安装过程。
 
-### [](https://zhul.in/2021/04/04/yay-more/#yay-lt-operation-gt-options-targets "yay <operation> [options] [targets]")`yay <operation> [options] [targets]`[](https://zhul.in/2021/04/04/yay-more/#yay-lt-operation-gt-options-targets)
+### `yay <operation> [options] [targets]`
 
 在这里，<operation>每次只能有一个，[options]和[targets]可以有多个，且多个[options]可以合起来写在一起。比如`yay -P -s -f`可以直接写成`yay -Psf`，顺序也可以颠倒，`-Psf`和`-sPf`没区别。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#Y-yay "-Y (--yay)")`-Y (--yay)`[](https://zhul.in/2021/04/04/yay-more/#Y-yay)
+#### `-Y (--yay)`
 
 -Y行为其实是yay的默认行为，当你没有加其他的行为参数时，yay就会执行-Y参数，可以跟`--gendb`和`-c`。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#gendb "--gendb")`--gendb`[](https://zhul.in/2021/04/04/yay-more/#gendb)
+##### --gendb`
 
 生成AUR数据库。**仅当从另一个AUR Helper迁移到yay时，才应使用此选项。**（根据我的个人理解，是根据你Arch内安装的源内找不到的包的包名去AUR里寻找对应的PKGBUILD，并且把能找到的PKGBUILD给clone到`~/.cache/yay/`目录下）
 
 千玄子大佬说：“简单说来就是把在 AUR 的 PKGBUILD 下下来然后比对是否要更新。”
 
-##### [](https://zhul.in/2021/04/04/yay-more/#c%EF%BC%88-clean%EF%BC%89 "-c（--clean）")`-c（--clean）`[](https://zhul.in/2021/04/04/yay-more/#c%EF%BC%88-clean%EF%BC%89)
+##### `-c（--clean）`
 
 清除不再需要的、没有被依赖的包。（相当于apt中的autoremove）
 
-#### [](https://zhul.in/2021/04/04/yay-more/#P-show "-P(--show)")`-P(--show)`[](https://zhul.in/2021/04/04/yay-more/#P-show)
+#### `-P(--show)`[](https://zhul.in/2021/04/04/yay-more/#P-show)
 
 执行特定的Print操作。可以跟的[option]有`-c、-f、-d、-g、-n、-s、-u、-w、-q`
 
@@ -474,5 +474,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MDM1OTg2NiwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbMTgyMDI5NzE2MSwxMDAyMzY4MTQxXX0=
 -->
