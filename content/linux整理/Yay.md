@@ -264,49 +264,49 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 #### upgrade菜单
 
-##### `--upgrademenu`[](https://zhul.in/2021/04/04/yay-more/#upgrademenu)
+##### `--upgrademenu`
 
 启用更新询问菜单。（询问你是否需要更新AUR包）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noupgrademenu "--noupgrademenu")`--noupgrademenu`[](https://zhul.in/2021/04/04/yay-more/#noupgrademenu)
+##### `--noupgrademenu`
 
 禁用更新询问菜单。（不询问你是否需要更新AUR包）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#answerupgrade "--answerupgrade")`--answerupgrade`[](https://zhul.in/2021/04/04/yay-more/#answerupgrade)
+##### `--answerupgrade`
 
 自动回答upgrademenu，后跟`<All|None|Installed|NotInstalled>`参数。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noanswerupgrade "*--noanswerupgrade")*`--noanswerupgrade`[](https://zhul.in/2021/04/04/yay-more/#noanswerupgrade)
+##### `--noanswerupgrade`
 
 不设置自动回答。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#removemake%E8%8F%9C%E5%8D%95 "removemake菜单")removemake菜单[](https://zhul.in/2021/04/04/yay-more/#removemake%E8%8F%9C%E5%8D%95)
+#### removemake菜单
 
-##### [](https://zhul.in/2021/04/04/yay-more/#askremovemake "*--askremovemake")*`--askremovemake`[](https://zhul.in/2021/04/04/yay-more/#askremovemake)
+##### `--askremovemake`
 
 在编译结束后，询问是否删除make depend。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#removemake "--removemake")`--removemake`[](https://zhul.in/2021/04/04/yay-more/#removemake)
+##### `--removemake`
 
 在编译结束后，删除make depend。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noremovemake "--noremovemake")`--noremovemake`[](https://zhul.in/2021/04/04/yay-more/#noremovemake)
+##### `--noremovemake`
 
 在编译结束后，不删除make depend。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#provides%E8%8F%9C%E5%8D%95 "provides菜单")provides菜单[](https://zhul.in/2021/04/04/yay-more/#provides%E8%8F%9C%E5%8D%95)
+#### provides菜单
 
-##### [](https://zhul.in/2021/04/04/yay-more/#provides "*--provides")*`--provides`[](https://zhul.in/2021/04/04/yay-more/#provides)
+##### [`--provides`
 
 搜索AUR包时，一同寻找其在AUR上的依赖程序。 当找到多个提供该依赖的包时，将出现一个菜单，提示您选择一个。尽管这不会引起注意，但这会增加依赖项解决时间。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noprovides "--noprovides")`--noprovides`[](https://zhul.in/2021/04/04/yay-more/#noprovides)
+##### `--noprovides`
 
 搜索AUR包时，不在AUR上寻找其依赖程序。尽管yay不会再次弹出依赖菜单供你选择，yay调用pacman时依然会出现pacman的选择菜单让你选择。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#pgpfetch%E8%8F%9C%E5%8D%95 "pgpfetch菜单")pgpfetch菜单[](https://zhul.in/2021/04/04/yay-more/#pgpfetch%E8%8F%9C%E5%8D%95)
+#### pgpfetch菜单
 
-##### [](https://zhul.in/2021/04/04/yay-more/#pgpfetch "*--pgpfetch")*`--pgpfetch`[](https://zhul.in/2021/04/04/yay-more/#pgpfetch)
+##### `--pgpfetch`
 
 询问你是否从每个PKGBUILD的validpgpkeys字段导入未知的PGP密钥。
 
@@ -462,5 +462,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxMTcyNjksMTAwMjM2ODE0MV19
+eyJoaXN0b3J5IjpbLTYyNTQ2MTY5NCwxMDAyMzY4MTQxXX0=
 -->
