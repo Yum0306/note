@@ -213,61 +213,58 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 ### 菜单配置型
 
 #### clean菜单
-##### [](https://zhul.in/2021/04/04/yay-more/#cleanmenu "*--cleanmenu")*`--cleanmenu`[](https://zhul.in/2021/04/04/yay-more/#cleanmenu)
+##### `--cleanmenu`
 
 启用清除询问菜单。（询问你是否需要清除已存在的文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nocleanmenu "--nocleanmenu")`--nocleanmenu`[](https://zhul.in/2021/04/04/yay-more/#nocleanmenu)
+##### `--nocleanmenu`
 
 禁用清除询问菜单。（不询问你是否需要清除已存在的文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#answerclean "--answerclean")`--answerclean`[](https://zhul.in/2021/04/04/yay-more/#answerclean)
+##### `--answerclean`
 
 自动回答cleanmenu，后跟`<All|None|Installed|NotInstalled>`参数。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noanswerclean "*--noanswerclean")*`--noanswerclean`[](https://zhul.in/2021/04/04/yay-more/#noanswerclean)
+##### `--noanswerclean`
 
 不设置自动回答。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#diff%E8%8F%9C%E5%8D%95 "diff菜单")diff菜单[](https://zhul.in/2021/04/04/yay-more/#diff%E8%8F%9C%E5%8D%95)
-
-##### [](https://zhul.in/2021/04/04/yay-more/#diffmenu "*--diffmenu")*`--diffmenu`[](https://zhul.in/2021/04/04/yay-more/#diffmenu)
+#### diff菜单
+##### `--diffmenu`
 
 启用对比询问菜单。（询问你是否需要对比本地文件和AUR文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nodiffmenu "--nodiffmenu")`--nodiffmenu`[](https://zhul.in/2021/04/04/yay-more/#nodiffmenu)
+##### `--nodiffmenu`
 
 禁用对比询问菜单。（不询问你是否需要对比本地文件和AUR文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#answerdiff "--answerdiff")`--answerdiff`[](https://zhul.in/2021/04/04/yay-more/#answerdiff)
+##### `--answerdiff`
 
 自动回答cleanmenu，后跟`<All|None|Installed|NotInstalled>`参数。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noanswerdiff "*--noanswerdiff")*`--noanswerdiff`[](https://zhul.in/2021/04/04/yay-more/#noanswerdiff)
+##### `--noanswerdiff`
 
 不设置自动回答。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#edit%E8%8F%9C%E5%8D%95 "edit菜单")edit菜单[](https://zhul.in/2021/04/04/yay-more/#edit%E8%8F%9C%E5%8D%95)
-
-##### [](https://zhul.in/2021/04/04/yay-more/#editmenu "--editmenu")`--editmenu`[](https://zhul.in/2021/04/04/yay-more/#editmenu)
+#### edit菜单
+#####`--editmenu`
 
 启用修改询问菜单。（询问你是否需要修改PKGBUILD以及相关文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noeditmenu "*--noeditmenu")*`--noeditmenu`[](https://zhul.in/2021/04/04/yay-more/#noeditmenu)
+##### `--noeditmenu`
 
 禁用修改询问菜单。（不询问你是否需要修改PKGBUILD以及相关文件）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#answeredit "--answeredit")`--answeredit`[](https://zhul.in/2021/04/04/yay-more/#answeredit)
+##### `--answeredit`
 
 自动回答editmenu，后跟`<All|None|Installed|NotInstalled>`参数。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noansweredit "*--noansweredit")*`--noansweredit`[](https://zhul.in/2021/04/04/yay-more/#noansweredit)
-
+##### `--noansweredit`
 不设置自动回答。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#upgrade%E8%8F%9C%E5%8D%95 "upgrade菜单")upgrade菜单[](https://zhul.in/2021/04/04/yay-more/#upgrade%E8%8F%9C%E5%8D%95)
+#### upgrade菜单
 
-##### [](https://zhul.in/2021/04/04/yay-more/#upgrademenu "*--upgrademenu")*`--upgrademenu`[](https://zhul.in/2021/04/04/yay-more/#upgrademenu)
+##### `--upgrademenu`[](https://zhul.in/2021/04/04/yay-more/#upgrademenu)
 
 启用更新询问菜单。（询问你是否需要更新AUR包）
 
@@ -465,5 +462,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNzA5MzI5NSwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbOTAxMTcyNjksMTAwMjM2ODE0MV19
 -->
