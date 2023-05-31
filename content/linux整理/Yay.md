@@ -161,62 +161,58 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 ##### `--git <command>`
 设置makepkg clone git资源时调用的git命令（比如你可以安装AUR中的fgit-go，使用`--git fgit`参数来让fastgit代理clone的过程）
 
-##### `--gpg <command>`[](https://zhul.in/2021/04/04/yay-more/#gpg-lt-command-gt)
+##### `--gpg <command>`
 
 设置gpg验证资源时调用的gpg命令
 
-##### [](https://zhul.in/2021/04/04/yay-more/#sudo-lt-command-gt "--sudo <command>")`--sudo <command>`[](https://zhul.in/2021/04/04/yay-more/#sudo-lt-command-gt)
+##### `--sudo <command>`
 
 设置调用sudo获取su权限安装pkg时所调用的sudo命令。
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%9E%8B "自定义配置文件型")自定义配置文件型[](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%9E%8B)
+### 自定义配置文件型
 
-##### [](https://zhul.in/2021/04/04/yay-more/#config-lt-file-gt "--config <file>")`--config <file>`[](https://zhul.in/2021/04/04/yay-more/#config-lt-file-gt)
+##### `--config <file>`
 
 设置读取的pacman配置文件。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#makepkgconf-lt-file-gt "--makepkgconf <file>")`--makepkgconf <file>`[](https://zhul.in/2021/04/04/yay-more/#makepkgconf-lt-file-gt)
+##### `--makepkgconf <file>`
 
 设置读取的makepkg配置文件。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nomakepkgconf "--nomakepkgconf")`--nomakepkgconf`[](https://zhul.in/2021/04/04/yay-more/#nomakepkgconf)
+##### `--nomakepkgconf`
 
 不读取系统中的makepkg.conf，仅使用Arch默认状态下的配置文件。
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B7%AF%E5%BE%84%E7%B1%BB%E5%9E%8B "自定义路径类型")自定义路径类型[](https://zhul.in/2021/04/04/yay-more/#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B7%AF%E5%BE%84%E7%B1%BB%E5%9E%8B)
+### 自定义路径类型
 
-##### [](https://zhul.in/2021/04/04/yay-more/#builddir-lt-dir-gt "--builddir <dir>")`--builddir <dir>`[](https://zhul.in/2021/04/04/yay-more/#builddir-lt-dir-gt)
+##### `--builddir <dir>`
 
 设置build路径，默认路径为`~/.cache/yay/`
 
-##### [](https://zhul.in/2021/04/04/yay-more/#absdir-lt-dir-gt "--absdir <dir>")`--absdir <dir>`[](https://zhul.in/2021/04/04/yay-more/#absdir-lt-dir-gt)
-
+##### `--absdir <dir>`
 设置abs路径，默认路径为`~/.cache/yay/abs/`
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E5%9E%8B "参数传递型")参数传递型[](https://zhul.in/2021/04/04/yay-more/#%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E5%9E%8B)
+### 参数传递型
 
-##### [](https://zhul.in/2021/04/04/yay-more/#editorflags-lt-flags-gt "--editorflags <flags>")`--editorflags <flags>`[](https://zhul.in/2021/04/04/yay-more/#editorflags-lt-flags-gt)
-
+##### `--editorflags <flags>`
 后跟需要跟随传递给编辑器的参数。如果需要传递多个参数，可以使用引号。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#mflags-lt-flags-gt "--mflags <flags>")`--mflags <flags>`[](https://zhul.in/2021/04/04/yay-more/#mflags-lt-flags-gt)
+##### `--mflags <flags>`
 
 后跟需要跟随传递给makepkg的参数。如果需要传递多个参数，可以使用引号。
 
 这个用的人不多，但其实是非常好用的一个功能。在我们安装`deepin-wine-tim`等包的时候，很可能会遇到文件明明完整但checksum不通过的情况，这时我们可以跟一个`--skipchecksums`参数传递给makepkg以跳过checksum的过程。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#gpgflags-lt-flags-gt "--gpgflags <flags>")`--gpgflags <flags>`[](https://zhul.in/2021/04/04/yay-more/#gpgflags-lt-flags-gt)
-
+##### `--gpgflags <flags>`
 后跟需要跟随传递给pgp的参数。如果需要传递多个参数，可以使用引号。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#sudoflags-lt-flags-gt "--sudoflags <flags>")`--sudoflags <flags>`[](https://zhul.in/2021/04/04/yay-more/#sudoflags-lt-flags-gt)
+##### `--sudoflags <flags>`
 
 后跟需要跟随传递给sudo的参数。如果需要传递多个参数，可以使用引号。
 
-### [](https://zhul.in/2021/04/04/yay-more/#%E8%8F%9C%E5%8D%95%E9%85%8D%E7%BD%AE%E5%9E%8B "菜单配置型")菜单配置型[](https://zhul.in/2021/04/04/yay-more/#%E8%8F%9C%E5%8D%95%E9%85%8D%E7%BD%AE%E5%9E%8B)
+### 菜单配置型
 
-#### [](https://zhul.in/2021/04/04/yay-more/#clean%E8%8F%9C%E5%8D%95 "clean菜单")clean菜单[](https://zhul.in/2021/04/04/yay-more/#clean%E8%8F%9C%E5%8D%95)
-
+#### clean菜单
 ##### [](https://zhul.in/2021/04/04/yay-more/#cleanmenu "*--cleanmenu")*`--cleanmenu`[](https://zhul.in/2021/04/04/yay-more/#cleanmenu)
 
 启用清除询问菜单。（询问你是否需要清除已存在的文件）
@@ -469,5 +465,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzg4MTMxNDQsMTAwMjM2ODE0MV19
+eyJoaXN0b3J5IjpbMTkyNzA5MzI5NSwxMDAyMzY4MTQxXX0=
 -->
