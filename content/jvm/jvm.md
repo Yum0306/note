@@ -32,9 +32,6 @@ java虚拟机的启动是通过引导类加载器（bootstrap class loader） �
 
 某线程调用Runtime类或者System类的exit方法，或者Runtime类的halt方法，并且java安全管理器也允许这次exit或者halt操作 （System.exit方法实际上也是去调用了Runtime类的halt方法（Runtime是一个饿汉式加载的运行时数据区（Runtime Data Area）每个运行时的虚拟机独有一份 包含了 方法区、java栈、本地方法栈、堆、程序计数器））
 
-  
-
-![](https://api.bilibili.com/x/note/image?image_id=18581)
 
   
 
@@ -164,7 +161,6 @@ PMU headware和Java profiling tool 和诊断协助功能
 
 如果说HotSpot有一天真的被取代，Graal VM希望最大，但是Java的软件生态没有丝毫变化
 
-![](https://api.bilibili.com/x/note/image?image_id=18587)
 
   
 
@@ -180,13 +176,7 @@ PMU headware和Java profiling tool 和诊断协助功能
 
 28-类的加载过程一：Loading P28 - 00:01
 
-﻿
 
-![](https://api.bilibili.com/x/note/image?image_id=18590)
-
-  
-
-![](https://api.bilibili.com/x/note/image?image_id=18591)
 
   
 
@@ -290,11 +280,6 @@ java语言编写，由sun.misc.Launcher$AppClassLoader实现，派生与ClassLoa
 
 3.如果父类加载器可以完成类加载任务，就成功返回，倘若父类加载器无法完成此加载任务，子加载器才会尝试自己去加载，这就是双亲委派机制
 
-![](https://api.bilibili.com/x/note/image?image_id=20249)
-
-  
-
-![](https://api.bilibili.com/x/note/image?image_id=20250)
 
 ﻿
 
@@ -430,8 +415,6 @@ Java程序对类的使用方式分为，主动使用和被动使用
 
 ﻿
 
-![](https://api.bilibili.com/x/note/image?image_id=20332)
-
   
 
 **2.1 Method Area 方法区**
@@ -452,8 +435,6 @@ java虚拟机定义了若干中程序运行期间会使用到的运行时数据�
 
   
 
-![](https://api.bilibili.com/x/note/image?image_id=20337)
-
   
 
 **3.Execution Engine 执行引擎**
@@ -472,5 +453,5 @@ java虚拟机定义了若干中程序运行期间会使用到的运行时数据�
 
 -   1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTIzODg5OF19
+eyJoaXN0b3J5IjpbLTIzODE4NTg2MywtNjc1MjM4ODk4XX0=
 -->
