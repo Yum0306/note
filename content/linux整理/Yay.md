@@ -10,7 +10,7 @@
 
 **Tips2: 使用电脑端的访客可以在侧栏以获取目录。**
 
-## [](https://zhul.in/2021/04/04/yay-more/#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95 "基本用法")基本用法[](https://zhul.in/2021/04/04/yay-more/#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
+## [](https://zhul.in/2021/04/04/yay-more/#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95 "基本用法")基本用法[]
 
 yay的基本用法是`yay <operation> [options] [targets]`、`yay foo`和`yay`，`yay <operation> [options] [targets]`的用法可以讨论的点比较多，我会在后文中一一道来。
 
@@ -474,5 +474,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODkxMjA3NSwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbLTY3MDM1OTg2NiwxMDAyMzY4MTQxXX0=
 -->
