@@ -345,55 +345,55 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 在系统更新期间， 不检查AUR的vcs包是否有更新。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#timeupdate "timeupdate")timeupdate[](https://zhul.in/2021/04/04/yay-more/#timeupdate)
+#### timeupdate
 
-##### [](https://zhul.in/2021/04/04/yay-more/#timeupdate-1 "--timeupdate")`--timeupdate`[](https://zhul.in/2021/04/04/yay-more/#timeupdate-1)
+##### `--timeupdate`
 
 在系统更新期间，将已安装软件包的构建时间与每个软件包的AUR的最后修改时间进行比较。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#notimeupdate "*--notimeupdate")*`--notimeupdate`[](https://zhul.in/2021/04/04/yay-more/#notimeupdate)
+##### `--notimeupdate`
 
 在系统更新期间，不将已安装软件包的构建时间与每个软件包的AUR的最后修改时间进行比较。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#redownload "redownload")redownload[](https://zhul.in/2021/04/04/yay-more/#redownload)
+#### redownload
 
-##### [](https://zhul.in/2021/04/04/yay-more/#redownload-1 "--redownload")`--redownload`[](https://zhul.in/2021/04/04/yay-more/#redownload-1)
+##### `--redownload`
 
 就算PKGBUILD已经存在，也要重新从AUR上获取一份新的PKGBUILD并覆盖原有PKGBUILD。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#redownloadall "--redownloadall")`--redownloadall`[](https://zhul.in/2021/04/04/yay-more/#redownloadall)
+##### `--redownloadall`
 
 就算PKGBUILD已经存在，也要重新从AUR上获取所有AUR包的PKGBUILD并覆盖原有PKGBUILD。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#noredownload "*--noredownload")*`--noredownload`[](https://zhul.in/2021/04/04/yay-more/#noredownload)
+##### `--noredownload`
 
 当下载PKGBUILD时，，如果发现cache中的PKGBUILD版本＞＝AUR上的版本时，直接使用本地的PKGBUILD。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#rebuild "rebuild")rebuild[](https://zhul.in/2021/04/04/yay-more/#rebuild)
+#### rebuild
 
-##### [](https://zhul.in/2021/04/04/yay-more/#rebuild-1 "--rebuild")`--rebuild`[](https://zhul.in/2021/04/04/yay-more/#rebuild-1)
+##### `--rebuild`
 
 即使在cache中有可用的二进制包的情况下，也始终要重新编译目标软件包。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#rebuildall "--rebuildall")`--rebuildall`[](https://zhul.in/2021/04/04/yay-more/#rebuildall)
+##### `--rebuildall`
 
 即使在cache中有可用的二进制包的情况下，也始终要重新编译所有的AUR包。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#rebuildtree "--rebuildtree")`--rebuildtree`[](https://zhul.in/2021/04/04/yay-more/#rebuildtree)
+##### `--rebuildtree`
 
 安装AUR包时，以递归方式重新编译并重新安装其所有AUR依赖包，即使已安装的依赖项也是如此。 该选项使您可以轻松地针对当前系统的库重新构建软件包，如果它们变得不兼容。（比如python3.8->3.9）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#norebuild "*--norebuild")*`--norebuild`[](https://zhul.in/2021/04/04/yay-more/#norebuild)
+##### `--norebuild`
 
 构建软件包时，如果在缓存中找到该软件包并且该软件包与想要的软件包的版本相同，则跳过软件包的编译过程并使用现有的二进制程序。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#sudoloop "sudoloop")sudoloop[](https://zhul.in/2021/04/04/yay-more/#sudoloop)
+#### sudoloop
 
-##### [](https://zhul.in/2021/04/04/yay-more/#sudoloop-1 "--sudoloop")`--sudoloop`[](https://zhul.in/2021/04/04/yay-more/#sudoloop-1)
+##### `--sudoloop`
 
 在后台循环调用sudo，以防止sudo授权在长时间构建期间超时。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#nosudoloop "*--nosudoloop")*`--nosudoloop`[](https://zhul.in/2021/04/04/yay-more/#nosudoloop)
+##### `--nosudoloop`
 
 不在后台循环调用sudo，可能会导致sudo授权在长时间构建期间超时。
 
@@ -425,7 +425,7 @@ yay将会清除AUR包构建时的缓存和没有被track的文件。没有被tra
 
 ##### "--aururl")`--aururl`
 
-更改aur源地址（默认为 [https://aur.archlinux.org](https://aur.archlinux.org/) ），适用于中国用户，可以使用此参数将AUR的地址设置成清华的反代，具体的配置命令为
+更改aur源地址（默认为 [https://aur.archlinux.org]），适用于中国用户，可以使用此参数将AUR的地址设置成清华的反代，具体的配置命令为
 
 ```
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
@@ -461,5 +461,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1NjEwNDMzLDEwMDIzNjgxNDFdfQ==
+eyJoaXN0b3J5IjpbMjEwMzQ0MDA3MiwxMDAyMzY4MTQxXX0=
 -->
