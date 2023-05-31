@@ -57,65 +57,63 @@ May be the official Linux experimental version
 
 清除不再需要的、没有被依赖的包。（相当于apt中的autoremove）
 
-#### `-P(--show)`[](https://zhul.in/2021/04/04/yay-more/#P-show)
+#### `-P(--show)`
 
 执行特定的Print操作。可以跟的[option]有`-c、-f、-d、-g、-n、-s、-u、-w、-q`
 
-##### [](https://zhul.in/2021/04/04/yay-more/#c-complete "-c(--complete)")`-c(--complete)`[](https://zhul.in/2021/04/04/yay-more/#c-complete)
+##### `-c(--complete)`
 
 Print所有源内和AUR软件包的列表。这是给命令行操作提供的，并不打算由用户直接使用。（意思是启用了这个选项以后你的终端会出现一大串长常的列表来告诉你你的Arch到底可以从哪里安装哪些包，并不是直接给你用的，是作为数据留给别的命令来玩耍的）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#f-fish "-f(--fish)")`-f(--fish)`[](https://zhul.in/2021/04/04/yay-more/#f-fish)
+##### `-f(--fish)`
 
 在输出结果到终端时，会专门为fish用户做微调。（但是根据SamLukeYes大佬说他用fish体验下来并没有感知到加不加有什么区别，应该是属于感知不强的选项）
 
-##### [](https://zhul.in/2021/04/04/yay-more/#d-defaultconfig "-d(--defaultconfig)")`-d(--defaultconfig)`[](https://zhul.in/2021/04/04/yay-more/#d-defaultconfig)
+##### `-d(--defaultconfig)`
 
 Print默认的yay配置。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#g-currentconfig "-g(--currentconfig)")`-g(--currentconfig)`[](https://zhul.in/2021/04/04/yay-more/#g-currentconfig)
+##### `-g(--currentconfig)`
 
 Print当前的yay配置。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#n-numberupgrades "-n(--numberupgrades)")`-n(--numberupgrades)`[](https://zhul.in/2021/04/04/yay-more/#n-numberupgrades)
+##### `-n(--numberupgrades)`
 
 数一数你现在还有多少AUR包待更新。yay作者不推荐你使用呢，他推荐你用`yay -Qu`或者`wc -l`来代替它。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#s-stats "-s(--stats)")`-s(--stats)`[](https://zhul.in/2021/04/04/yay-more/#s-stats)
+##### `-s(--stats)`
 
 会展示一大堆信息，如下
 ```
 [zhullyb@Archlinux ~]$ yay -Ps==> Yay version v10.2.0							    #yay版本=============================================> Total installed packages: 1240				    #总共安装了多少包==> Total foreign installed packages: 24		    #多少包不是从源里安装的==> Explicitly installed packages: 271			    #有多少包是你自己主动安装的(而不是作为依赖安装的)==> Total Size occupied by packages: 14.3 GiB	    #安装的所有包合在一起一共占了你多少空间=============================================> Ten biggest packages:						    #十个体积最大的包wps-office-cn: 990.9 MiBttf-sarasa-gothic: 855.5 MiBlinux-firmware: 652.3 MiBbaidunetdisk-bin: 494.7 MiBcom.antutu.benchmark: 412.0 MiBwine: 402.2 MiBlinux-xanmod-cacule-uksm-cjktty: 324.4 MiBmicrosoft-edge-dev-bin: 316.4 MiBwine-mono: 316.2 MiBdeepin-wine5-i386: 259.5 MiB===========================================:: Querying AUR... -> Missing AUR Packages:  zhullyb-archlinux-git    #AUR里找不到的包 -> Flagged Out Of Date AUR Packages:  xml2		    #AUR中被人标注过期的包
 ```
 
-##### [](https://zhul.in/2021/04/04/yay-more/#u-upgrades "-u(--upgrades)")`-u(--upgrades)`[](https://zhul.in/2021/04/04/yay-more/#u-upgrades)
+##### `-u(--upgrades)`
 
 展示你所有待更新的包。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#w-news "-w(--news)")`-w(--news)`[](https://zhul.in/2021/04/04/yay-more/#w-news)
+##### `-w(--news)`
 
 展示来自archlinux.org的新闻。需要注意的是，这里的新闻是具有时效性的，只有在你的Arch最后一次更新以后发出来的新闻才会被显示出来。如果你不想要yay判断新闻时效性，你可以通过`yay -Pww`（即两个`w`）来获取所有能获得的新闻。
 
-##### [](https://zhul.in/2021/04/04/yay-more/#q-quiet "-q(--quiet)")`-q(--quiet)`[](https://zhul.in/2021/04/04/yay-more/#q-quiet)
+##### `-q(--quiet)`
 
 在输出新闻的时候，仅输出新闻的标题。该功能需要与`-w`连用，即`yay -Pwq`。
 
-#### [](https://zhul.in/2021/04/04/yay-more/#G-getpkgbuild "-G(--getpkgbuild)")`-G(--getpkgbuild)`[](https://zhul.in/2021/04/04/yay-more/#G-getpkgbuild)
+#### `-G(--getpkgbuild)`
 
 后跟包名。需要注意的是，如果指定的包不存在于官方源，则无法输出，后跟`-f、-p`参数。
 
 _如果希望仅获取来自AUR（即排除第三方源的干扰）的PKGBUILD，后需跟`-a`参数。_
 
-##### [](https://zhul.in/2021/04/04/yay-more/#f-force "-f(--force)")`-f(--force)`[](https://zhul.in/2021/04/04/yay-more/#f-force)
+##### `-f(--force)`
 
 强制下载AUR中的PKGBUILD，如果它在yay缓存目录已经存在了，那就覆盖它！
 
-##### [](https://zhul.in/2021/04/04/yay-more/#p-print "-p(--print)")`-p(--print)`[](https://zhul.in/2021/04/04/yay-more/#p-print)
-
+##### `-p(--print)`
 Print指定包的PKGBUILD。
 
-### [](https://zhul.in/2021/04/04/yay-more/#pacman-%E6%8B%93%E5%B1%95%E7%94%A8%E6%B3%95 "pacman 拓展用法")pacman 拓展用法[](https://zhul.in/2021/04/04/yay-more/#pacman-%E6%8B%93%E5%B1%95%E7%94%A8%E6%B3%95)
-
+### pacman 拓展用法
 yay虽然可以使用pacman的所有<operation>，但是它远不仅于此。在这一段，我将向你介绍yay中包含的那些pacman不包括的pacman <operation
 
 #### [](https://zhul.in/2021/04/04/yay-more/#S "-S")`-S`[](https://zhul.in/2021/04/04/yay-more/#S)
@@ -474,5 +472,5 @@ yay --aururl "https://aur.archlinux.org" --save
 
 刷新完成高速缓存的时间（以天为单位,默认为7）。 将此值设置为0将导致每次刷新缓存，而将其设置为-1将导致永远不刷新缓存。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDI5NzE2MSwxMDAyMzY4MTQxXX0=
+eyJoaXN0b3J5IjpbLTEwMjY3NzQ4NTMsMTAwMjM2ODE0MV19
 -->
